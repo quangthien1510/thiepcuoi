@@ -60,7 +60,8 @@ export default function LocationSection() {
             <iframe
               title={`Bản đồ ${venue.label}`}
               src={mapSrc}
-              className="h-full w-full"
+              className="pointer-events-none h-full w-full select-none"
+              scrolling="no"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
