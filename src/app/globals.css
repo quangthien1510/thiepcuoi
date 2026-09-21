@@ -2,14 +2,14 @@
 
 :root {
   --color-cream: #ffffff;
-  --color-cream-deep: #f3ead0;
-  --color-maroon: #6b2b2b;
-  --color-maroon-deep: #4a1d1d;
-  --color-rose: #c98a8a;
-  --color-pink: #f4677e;
-  --color-pink-deep: #e0435c;
-  --color-ink: #2b2320;
-  --color-gold: #b08b57;
+  --color-cream-deep: #e7f0e8;
+  --color-maroon: #52745a;
+  --color-maroon-deep: #234b35;
+  --color-rose: #91b39a;
+  --color-pink: #6f9b78;
+  --color-pink-deep: #386d4a;
+  --color-ink: #203129;
+  --color-gold: #b29a63;
   --color-paper: #ffffff;
 }
 
@@ -41,7 +41,7 @@ body {
 }
 
 body {
-  background: var(--color-cream);
+  background: linear-gradient(135deg, #f7fbf7 0%, var(--color-cream) 45%, #edf5ee 100%);
   color: var(--color-ink);
   font-family: var(--font-body), sans-serif;
   -webkit-tap-highlight-color: transparent;
@@ -52,7 +52,7 @@ body {
 .section-frame {
   position: relative;
   width: 100%;
-  max-width: 640px;
+  max-width: 800px;
   margin: 0 auto;
 }
 

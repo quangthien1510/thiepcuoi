@@ -77,7 +77,7 @@ export default function GiftSection() {
               src={active.qrImage}
               label={`QR chuyển khoản - ${active.owner}`}
               icon="🔳"
-              className="h-44 w-44 rounded-2xl border-2 border-[var(--color-gold)]/50 bg-white shadow-md"
+              className="h-56 w-56 rounded-2xl border-2 border-[var(--color-gold)]/50 bg-white shadow-md"
             />
             <div className="flex flex-col items-center gap-1">
               <p className="font-script text-2xl text-[var(--color-rose)]">{active.owner}</p>
@@ -93,7 +93,7 @@ export default function GiftSection() {
       )}
 
       <RevealOnScroll direction="up" className="flex items-center justify-center gap-4 pt-4">
-        <span className="animate-couple-sway inline-block h-20 w-20 overflow-hidden rounded-full border-2 border-[var(--color-gold)]/60 shadow-md">
+        <span className="animate-couple-sway inline-block h-24 w-24 overflow-hidden rounded-full border-2 border-[var(--color-gold)]/60 shadow-md">
           <PhotoPlaceholder
             src={photos.bride}
             label=""
@@ -102,7 +102,7 @@ export default function GiftSection() {
           />
         </span>
         <span className="animate-heartbeat text-3xl">💕</span>
-        <span className="animate-couple-sway-reverse inline-block h-20 w-20 overflow-hidden rounded-full border-2 border-[var(--color-gold)]/60 shadow-md">
+        <span className="animate-couple-sway-reverse inline-block h-24 w-24 overflow-hidden rounded-full border-2 border-[var(--color-gold)]/60 shadow-md">
           <PhotoPlaceholder
             src={photos.groom}
             label=""

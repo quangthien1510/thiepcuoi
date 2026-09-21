@@ -13,8 +13,8 @@ export default function CarFlowerIcon({ className = "h-10 w-10" }: Props) {
     >
       <defs>
         <linearGradient id="carBody" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#f4677e" />
-          <stop offset="100%" stopColor="#e0435c" />
+          <stop offset="0%" stopColor="var(--color-rose)" />
+          <stop offset="100%" stopColor="var(--color-pink-deep)" />
         </linearGradient>
       </defs>
 
@@ -32,7 +32,7 @@ export default function CarFlowerIcon({ className = "h-10 w-10" }: Props) {
       {/* kính xe */}
       <path
         d="M80 74 C82 70 86 68 90 68 L124 68 C129 68 133 71 136 76 L146 90 L74 90 Z"
-        fill="#fdf3ee"
+        fill="#f5faf5"
         opacity="0.85"
       />
 
@@ -41,9 +41,9 @@ export default function CarFlowerIcon({ className = "h-10 w-10" }: Props) {
 
       {/* bánh xe */}
       <circle cx="70" cy="140" r="16" fill="var(--color-maroon-deep)" />
-      <circle cx="70" cy="140" r="7" fill="#fdf3ee" />
+      <circle cx="70" cy="140" r="7" fill="#f5faf5" />
       <circle cx="150" cy="140" r="16" fill="var(--color-maroon-deep)" />
-      <circle cx="150" cy="140" r="7" fill="#fdf3ee" />
+      <circle cx="150" cy="140" r="7" fill="#f5faf5" />
 
       {/* hoa trang trí nắp capo trước */}
       <g transform="translate(150 78)">

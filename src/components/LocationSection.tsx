@@ -73,7 +73,7 @@ export default function LocationSection() {
       </div>
 
       <div className="flex items-center gap-4">
-        <RevealOnScroll direction="left" className="w-1/2">
+        <RevealOnScroll direction="left" className="w-[58%]">
           <PhotoPlaceholder
             src={photos.bride}
             label="Ảnh cô dâu"

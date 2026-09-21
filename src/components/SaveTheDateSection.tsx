@@ -79,7 +79,7 @@ export default function SaveTheDateSection() {
             label="Khoảnh khắc cưới 1"
             fit="cover"
             plain
-            className="aspect-[3/4] h-full w-full rounded-lg"
+            className="aspect-[5/6] h-full w-full rounded-lg"
           />
         </RevealOnScroll>
 
@@ -89,7 +89,7 @@ export default function SaveTheDateSection() {
             label="Khoảnh khắc cưới 2"
             fit="cover"
             plain
-            className="aspect-[3/4] w-full rounded-lg"
+            className="aspect-[5/6] w-full rounded-lg"
           />
         </RevealOnScroll>
 
@@ -114,7 +114,7 @@ export default function SaveTheDateSection() {
               label={`Khoảnh khắc cưới ${index + 3}`}
               fit="cover"
               plain
-              className="aspect-[3/4] w-full rounded-lg"
+              className="aspect-[5/6] w-full rounded-lg"
             />
           </RevealOnScroll>
         ))}

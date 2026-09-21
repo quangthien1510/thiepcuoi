@@ -175,7 +175,7 @@ export default function FloatingWidgets() {
                           className="h-full w-full object-cover"
                         />
                       ) : (
-                        <span className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#efe2d3] to-[#e7d3c9] text-lg">
+                        <span className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#eef6ef] to-[#dcebdd] text-lg">
                           💌
                         </span>
                       )}
@@ -273,7 +273,7 @@ export default function FloatingWidgets() {
                     className="h-full w-full object-cover"
                   />
                 ) : (
-                  <span className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#efe2d3] to-[#e7d3c9] text-lg">
+                      <span className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#eef6ef] to-[#dcebdd] text-lg">
                     💌
                   </span>
                 )}

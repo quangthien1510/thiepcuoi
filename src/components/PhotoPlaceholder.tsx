@@ -45,7 +45,7 @@ export default function PhotoPlaceholder({
         } ${
           src || plain || fit === "contain"
             ? "border-0 bg-transparent"
-            : "border border-dashed border-[var(--color-gold)]/50 bg-gradient-to-br from-[#efe2d3] via-[#f6ede1] to-[#e7d3c9]"
+            : "border border-dashed border-[var(--color-gold)]/50 bg-gradient-to-br from-[#eef6ef] via-white to-[#dcebdd]"
         } ${className}`}
       >
         {src ? (
@@ -53,8 +53,8 @@ export default function PhotoPlaceholder({
             src={src}
             alt={label || "Ảnh cưới"}
             fill
-            sizes="(max-width: 640px) 100vw, 640px"
-            quality={100}
+            sizes="(max-width: 640px) 100vw, 800px"
+            quality={82}
             className={`${fit === "contain" ? "object-contain" : "object-cover"} rounded-2xl`}
           />
         ) : (
@@ -82,8 +82,9 @@ export default function PhotoPlaceholder({
                 src={src}
                 alt={label || "Ảnh cưới phóng to"}
                 fill
-                sizes="92vw"
-                quality={100}
+                sizes="(max-width: 640px) 92vw, 900px"
+                quality={82}
+                priority
                 className="rounded-2xl object-contain"
               />
               <button

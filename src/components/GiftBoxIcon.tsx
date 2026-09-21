@@ -13,12 +13,12 @@ export default function GiftBoxIcon({ className = "h-16 w-16" }: Props) {
     >
       <defs>
         <linearGradient id="giftBoxBody" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#f6ede1" />
-          <stop offset="100%" stopColor="#e3c9bd" />
+          <stop offset="0%" stopColor="#eef6ef" />
+          <stop offset="100%" stopColor="#cfe1d2" />
         </linearGradient>
         <linearGradient id="giftBoxLid" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#faf2e7" />
-          <stop offset="100%" stopColor="#edd9c9" />
+          <stop offset="0%" stopColor="#ffffff" />
+          <stop offset="100%" stopColor="#e1eee3" />
         </linearGradient>
       </defs>
 
@@ -98,7 +98,7 @@ export default function GiftBoxIcon({ className = "h-16 w-16" }: Props) {
           transform="rotate(16 120 50)"
         />
         <circle cx="100" cy="50" r="11" fill="var(--color-gold)" />
-        <circle cx="100" cy="50" r="5.5" fill="#fff8ef" />
+        <circle cx="100" cy="50" r="5.5" fill="#f7fbf7" />
       </g>
     </svg>
   );

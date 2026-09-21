@@ -29,12 +29,12 @@ export default function PeopleTimelineSection() {
           </p>
           <p className="font-body text-sm text-[var(--color-ink)]/60">{people.groom.birth}</p>
         </RevealOnScroll>
-        <RevealOnScroll direction="right" delayMs={100} className="w-1/2">
+        <RevealOnScroll direction="right" delayMs={100} className="w-[58%]">
           <PhotoPlaceholder
             src={photos.groom}
             label="Ảnh chú rể"
             icon="🤵"
-            className="aspect-[2.5/4] w-full rounded-xl"
+            className="aspect-[2.5/4] h-full w-full rounded-xl"
           />
         </RevealOnScroll>
       </div>
@@ -94,7 +94,7 @@ export default function PeopleTimelineSection() {
             label="Ảnh sau timeline 1"
             fit="cover"
             plain
-            className="aspect-[3/4] h-full w-full rounded-2xl"
+            className="aspect-[4/5] h-full w-full rounded-2xl"
           />
         </RevealOnScroll>
 
@@ -104,7 +104,7 @@ export default function PeopleTimelineSection() {
             label="Ảnh sau timeline 2"
             fit="cover"
             plain
-            className="aspect-[4/5] w-full rounded-2xl"
+            className="aspect-[5/6] w-full rounded-2xl"
           />
         </RevealOnScroll>
 
@@ -120,7 +120,7 @@ export default function PeopleTimelineSection() {
               label={`Ảnh sau timeline ${index + 3}`}
               fit="cover"
               plain
-              className="aspect-[4/5] w-full rounded-2xl"
+              className="aspect-[5/6] w-full rounded-2xl"
             />
           </RevealOnScroll>
         ))}
