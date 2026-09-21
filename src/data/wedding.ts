@@ -20,6 +20,14 @@ export const weddingData = {
     groom: "/images/CND-groom.jpg",
     bride: "/images/CND01820.jpg",
     timeline: "/images/CND-timeline.jpg",
+    // Năm ảnh lớn hiển thị trong khu vực Khoảnh khắc.
+    gallery: [
+      "/images/CND-save-01.jpg",
+      "/images/CND-save-02.jpg",
+      "/images/CND-groom.jpg",
+      "/images/CND-timeline.jpg",
+      "/images/CND-avatar.jpg",
+    ],
     // Ảnh đại diện hiển thị trên nút mở/đóng khung lời chúc (góc dưới màn hình).
     // Nên dùng ảnh vuông, cận mặt (giống avatar chat) để hiện rõ khi thu nhỏ.
     avatar: "/images/CND-avatar.jpg",
@@ -123,4 +131,10 @@ export const weddingData = {
     { name: "Hà", message: "Chúc mừng hạnh phúc!" },
     { name: "Huy", message: "Chúc hai bạn trăm năm hạnh phúc!" },
     { name: "Chanh", message: "Chúc mừng hạnh phúc trăm năm!" },
-    { name: "Chinh", message: "Chúc hai bạn trăm năm 
+    { name: "Chinh", message: "Chúc hai bạn trăm năm hạnh phúc!" },
+  ],
+
+  brandLine: "Thiệp cưới online",
+};
+
+export type WeddingData = typeof weddingData;
