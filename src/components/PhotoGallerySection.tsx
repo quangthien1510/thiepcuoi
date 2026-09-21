@@ -21,7 +21,7 @@ export default function PhotoGallerySection() {
                 src={src}
                 alt={`Khoảnh khắc cưới ${index + 1}`}
                 fill
-                sizes="(max-width: 500px) 50vw, 250px"
+                sizes="(max-width: 640px) 50vw, 320px"
                 quality={100}
                 priority={index === 0}
                 className="object-cover"
@@ -38,7 +38,7 @@ export default function PhotoGallerySection() {
               src={thirdImage}
               alt="Khoảnh khắc cưới 3"
               fill
-              sizes="(max-width: 500px) 100vw, 500px"
+              sizes="(max-width: 640px) 100vw, 640px"
               quality={100}
               className="object-cover"
             />
@@ -64,7 +64,7 @@ export default function PhotoGallerySection() {
                 src={src}
                 alt={`Khoảnh khắc cưới ${index + 4}`}
                 fill
-                sizes="(max-width: 500px) 50vw, 250px"
+                sizes="(max-width: 640px) 50vw, 320px"
                 quality={100}
                 className="object-cover"
               />

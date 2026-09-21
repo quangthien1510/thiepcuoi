@@ -51,8 +51,14 @@ body {
 .section-frame {
   position: relative;
   width: 100%;
-  max-width: 500px;
+  max-width: 640px;
   margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+  .section-frame {
+    max-width: 100vw;
+  }
 }
 
 .divider-hairline {

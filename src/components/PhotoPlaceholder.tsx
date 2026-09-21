@@ -22,7 +22,7 @@ export default function PhotoPlaceholder({
           src={src}
           alt={label || "Ảnh cưới"}
           fill
-          sizes="(max-width: 500px) 100vw, 500px"
+          sizes="(max-width: 640px) 100vw, 640px"
           quality={100}
           className="object-cover"
         />

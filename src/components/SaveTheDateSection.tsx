@@ -6,7 +6,7 @@ export default function SaveTheDateSection() {
   const { families, invitationLine, photos } = weddingData;
 
   return (
-    <section className="section-frame flex flex-col items-center gap-8 px-6 pt-10 pb-14 text-center">
+    <section className="section-frame flex flex-col items-center gap-8 px-4 pt-10 pb-14 text-center sm:px-6">
       <div className="grid w-full grid-cols-5 gap-2">
         <RevealOnScroll direction="left" className="col-span-3">
           <PhotoPlaceholder
@@ -71,7 +71,7 @@ export default function SaveTheDateSection() {
       <div className="grid w-full grid-cols-6 gap-3">
         {photos.gallery.map((src, index) => (
           <RevealOnScroll
-            key={src}
+            key={`${src}-${index}`}
             direction="up"
             delayMs={index * 80}
             className={index < 2 ? "col-span-3" : "col-span-2"}

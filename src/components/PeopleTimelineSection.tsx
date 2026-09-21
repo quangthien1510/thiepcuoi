@@ -19,7 +19,7 @@ export default function PeopleTimelineSection() {
 
   return (
     <section className="section-frame flex flex-col gap-10 pt-14 pb-14">
-      <div className="flex items-center gap-4 px-6">
+      <div className="flex items-center gap-4 px-4 sm:px-6">
         <RevealOnScroll direction="left" className="flex flex-1 flex-col items-center gap-1 text-center">
           <p className="font-script text-2xl text-[var(--color-rose)]">
             {people.groom.role}
@@ -46,7 +46,7 @@ export default function PeopleTimelineSection() {
           icon=""
           className="absolute inset-0 h-full w-full rounded-none border-0 opacity-25"
         />
-        <div className="relative flex flex-col items-center gap-8 px-6">
+        <div className="relative flex flex-col items-center gap-8 px-4 sm:px-6">
           <h2 className="font-display text-4xl font-bold tracking-[0.15em] text-[var(--color-maroon-deep)]">
             TIMELINE
           </h2>
@@ -75,10 +75,10 @@ export default function PeopleTimelineSection() {
         </div>
       </div>
 
-      <div className="grid grid-cols-6 gap-3 px-6">
+      <div className="grid grid-cols-6 gap-3 px-4 sm:px-6">
         {timelineGallery.map((src, index) => (
           <RevealOnScroll
-            key={src}
+            key={`${src}-${index}`}
             direction={index % 2 === 0 ? "left" : "right"}
             delayMs={index * 80}
             className={index < 2 ? "col-span-3" : "col-span-2"}

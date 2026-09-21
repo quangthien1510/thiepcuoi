@@ -14,35 +14,31 @@ export const weddingData = {
   photos: {
     // Thêm file ảnh vào public/images/ rồi chỉ sửa tên file tại đây.
     // Ví dụ: cover: "/images/cover.jpg"
-    cover: "",
-    saveTheDate1: "",
-    saveTheDate2: "",
-    groom: "",
-    bride: "",
-    timeline: "",
-    // Năm ảnh hiển thị trong khu vực Khoảnh khắc.
+    cover: "/images/CND01734.webp",
+    saveTheDate1: "/images/CND01217.webp",
+    saveTheDate2: "/images/CND01927.webp",
+    groom: "/images/CND01045.webp",
+    bride: "/images/CND01820.webp",
+    timeline: "/images/CND01734.webp",
+    // Đúng năm ảnh hiển thị trong khu vực Khoảnh khắc.
     gallery: [
-      "",
-      "",
-      "",
-      "",
-      "",
+      "/images/CND01833.webp",
+      "/images/CND01131.webp",
+      "/images/CND01185.webp",
+      "/images/CND01563.webp",
+      "/images/CND01734.webp",
     ],
-    // Chín ảnh bổ sung, phân bổ ở các phần khác nhau của thiệp.
+    // Đúng năm ảnh hiển thị trong khu vực sau timeline.
     extraPhotos: [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
+      "/images/CND02056.webp",
+      "/images/CND02041.webp",
+      "/images/CND02090_2.webp",
+      "/images/CND02108.webp",
+      "/images/CND01034.webp",
     ],
     // Ảnh đại diện hiển thị trên nút mở/đóng khung lời chúc (góc dưới màn hình).
     // Nên dùng ảnh vuông, cận mặt (giống avatar chat) để hiện rõ khi thu nhỏ.
-    avatar: "",
+    avatar: "/images/CND01833.webp",
   },
   couple: {
     groomName: "Quang Thiện",
@@ -88,14 +84,14 @@ export const weddingData = {
     bride: {
       label: "Địa điểm nhà gái",
       name: "Tại tư gia nhà gái",
-      address: "Vui lòng cập nhật địa chỉ nhà gái",
-      mapQuery: "",
+      address: "Số Nhà 15 Đường Mương Chính",
+      mapQuery: "Số Nhà 15 Đường Mương Chính, Đa Phúc, Ha Noi",
     },
     groom: {
       label: "Địa điểm nhà trai",
       name: "Tại tư gia nhà trai",
-      address: "Số 1 Lương Yên, Bạch Đằng, HN",
-      mapQuery: "Số 1 Lương Yên, Bạch Đằng, Hai Ba Trung, Ha Noi",
+      address: "Số Nhà 19 Đường Mương Chính",
+      mapQuery: "Số Nhà 19 Đường Mương Chính, Đa Phúc, Ha Noi",
     },
   },
 
