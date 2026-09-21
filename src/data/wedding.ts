@@ -15,26 +15,26 @@ export const weddingData = {
     // Thêm file ảnh vào public/images/ rồi chỉ sửa tên file tại đây.
     // Ví dụ: cover: "/images/cover.jpg"
     cover: "/images/CND01734.webp",
-    saveTheDate1: "/images/CND01217.webp",
-    saveTheDate2: "/images/CND01927.webp",
-    groom: "/images/CND01045.webp",
+    saveTheDate1: "/images/CND01230.webp",
+    saveTheDate2: "/images/CND01217.webp",
+    groom: "/images/CND01034.webp",
     bride: "/images/CND01820.webp",
     timeline: "/images/CND01734.webp",
     // Đúng năm ảnh hiển thị trong khu vực Khoảnh khắc.
     gallery: [
       "/images/CND01833.webp",
       "/images/CND01131.webp",
-      "/images/CND01185.webp",
       "/images/CND01563.webp",
-      "/images/CND01734.webp",
+      "/images/CND01185.webp",
+      "/images/CND01045.webp",
     ],
     // Đúng năm ảnh hiển thị trong khu vực sau timeline.
     extraPhotos: [
       "/images/CND02056.webp",
       "/images/CND02041.webp",
       "/images/CND02090_2.webp",
+      "/images/CND01927.webp",
       "/images/CND02108.webp",
-      "/images/CND01034.webp",
     ],
     // Ảnh đại diện hiển thị trên nút mở/đóng khung lời chúc (góc dưới màn hình).
     // Nên dùng ảnh vuông, cận mặt (giống avatar chat) để hiện rõ khi thu nhỏ.

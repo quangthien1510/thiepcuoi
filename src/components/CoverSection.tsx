@@ -13,7 +13,7 @@ export default function CoverSection() {
           src={photos.cover}
           label="Ảnh cưới bìa (dọc)"
           icon="👰🤵"
-          className="h-full w-full rounded-none border-0"
+          className="h-full w-full rounded-none border-0 "
         />
       </RevealOnScroll>
 
