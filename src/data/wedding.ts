@@ -14,7 +14,7 @@ export const weddingData = {
   photos: {
     // Thêm file ảnh vào public/images/ rồi chỉ sửa tên file tại đây.
     // Ví dụ: cover: "/images/cover.jpg"
-    cover: "/images/THIỆN _ HÂN OK/CND01667.jpg",
+    cover: "",
     saveTheDate1: "/images/THIỆN _ HÂN OK/CND01034.jpg",
     saveTheDate2: "/images/THIỆN _ HÂN OK/CND01045.jpg",
     groom: "/images/THIỆN _ HÂN OK/CND01127.jpg",
