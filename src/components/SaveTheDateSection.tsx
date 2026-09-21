@@ -13,7 +13,7 @@ export default function SaveTheDateSection() {
             src={photos.saveTheDate1}
             label="Ảnh 1"
             icon="💑"
-            className="aspect-[4/5] w-full rounded-2xl"
+            className="aspect-[3.5/5] w-full rounded-2xl"
           />
         </RevealOnScroll>
         <RevealOnScroll direction="right" delayMs={100} className="col-span-2 mt-6">
@@ -21,7 +21,7 @@ export default function SaveTheDateSection() {
             src={photos.saveTheDate2}
             label="Ảnh 2"
             icon="🤍"
-            className="aspect-[3/5] w-full rounded-2xl"
+            className="aspect-[2.5/5] w-full rounded-2xl"
           />
         </RevealOnScroll>
       </div>
@@ -114,7 +114,7 @@ export default function SaveTheDateSection() {
               label={`Khoảnh khắc cưới ${index + 3}`}
               fit="cover"
               plain
-              className="aspect-[5/6] w-full rounded-lg"
+              className="aspect-[4/6] w-full rounded-lg"
             />
           </RevealOnScroll>
         ))}

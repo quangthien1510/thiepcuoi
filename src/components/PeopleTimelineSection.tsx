@@ -104,7 +104,7 @@ export default function PeopleTimelineSection() {
             label="Ảnh sau timeline 2"
             fit="cover"
             plain
-            className="aspect-[5/6] w-full rounded-2xl"
+            className="aspect-[4/6] w-full rounded-2xl"
           />
         </RevealOnScroll>
 
@@ -120,7 +120,7 @@ export default function PeopleTimelineSection() {
               label={`Ảnh sau timeline ${index + 3}`}
               fit="cover"
               plain
-              className="aspect-[5/6] w-full rounded-2xl"
+              className="aspect-[4/6] w-full rounded-2xl"
             />
           </RevealOnScroll>
         ))}
