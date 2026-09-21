@@ -78,7 +78,7 @@ export default function LocationSection() {
             src={photos.bride}
             label="Ảnh cô dâu"
             icon="👰"
-            className="aspect-[3/4] w-full rounded-xl"
+            className="aspect-[2.5/4] w-full rounded-xl"
           />
         </RevealOnScroll>
         <RevealOnScroll direction="right" delayMs={100} className="flex flex-1 flex-col items-center gap-1 text-center">

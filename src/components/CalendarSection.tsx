@@ -38,7 +38,7 @@ export default function CalendarSection() {
   const weeks = buildMonthGrid(weddingDateISO);
 
   return (
-    <section className="section-frame flex flex-col items-center gap-6 px-6 pt-14 pb-14 text-center">
+    <section className="section-frame flex flex-col items-center gap-6 px-6  text-center">
       <h2 className="flex flex-col items-center font-script text-4xl leading-tight text-[var(--color-ink)]">
         <RevealOnScroll direction="left" distance={70}>
           {couple.brideName}

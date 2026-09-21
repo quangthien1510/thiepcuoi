@@ -21,7 +21,7 @@ export default function RSVPSection() {
   }
 
   return (
-    <section id="rsvp" className="section-frame flex flex-col gap-6 px-6 pt-14 pb-14">
+    <section id="rsvp" className="section-frame flex flex-col gap-6 px-6 pb-14">
       <RevealOnScroll direction="up">
         <p className="text-center font-body text-[15px] leading-relaxed text-[var(--color-maroon)]">
           {rsvp.heading}

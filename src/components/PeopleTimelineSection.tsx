@@ -18,7 +18,7 @@ export default function PeopleTimelineSection() {
   const timelineGallery = photos.extraPhotos.slice(0, 5);
 
   return (
-    <section className="section-frame flex flex-col gap-10 pt-14 pb-14">
+    <section className="section-frame flex flex-col gap-10 pb-14">
       <div className="flex items-center gap-4 px-4 sm:px-6">
         <RevealOnScroll direction="left" className="flex flex-1 flex-col items-center gap-1 text-center">
           <p className="font-script text-2xl text-[var(--color-rose)]">
@@ -34,7 +34,7 @@ export default function PeopleTimelineSection() {
             src={photos.groom}
             label="Ảnh chú rể"
             icon="🤵"
-            className="aspect-[3/4] w-full rounded-xl"
+            className="aspect-[2.5/4] w-full rounded-xl"
           />
         </RevealOnScroll>
       </div>

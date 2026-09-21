@@ -24,7 +24,7 @@ export default function GiftSection() {
   }
 
   return (
-    <section id="gift" className="section-frame flex flex-col items-center gap-6 px-6 pt-14 pb-14 text-center">
+    <section id="gift" className="section-frame flex flex-col items-center gap-6 px-6  text-center">
       <RevealOnScroll direction="zoom" className="w-full max-w-[220px] rounded-md bg-[var(--color-maroon-deep)] py-3 font-display text-lg font-semibold text-white shadow-md">
         {gift.heading}
       </RevealOnScroll>
@@ -112,8 +112,15 @@ export default function GiftSection() {
         </span>
       </RevealOnScroll>
 
-      <RevealOnScroll direction="up" delayMs={100} className="font-script text-3xl text-[var(--color-rose)]">
-        {gift.thankYou}
+      <RevealOnScroll
+        direction="up"
+        delayMs={100}
+        className="flex flex-col items-center gap-1 pt-10"
+      >
+        <p className="font-script text-3xl text-[var(--color-rose)]">{gift.thankYou}</p>
+        <p className="max-w-xs font-body text-sm leading-relaxed text-[var(--color-ink)]/75">
+          {gift.thankYouNote}
+        </p>
       </RevealOnScroll>
     </section>
   );

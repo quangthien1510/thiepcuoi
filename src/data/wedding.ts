@@ -125,6 +125,8 @@ export const weddingData = {
   gift: {
     heading: "Hộp quà mừng",
     thankYou: "Thank you",
+    thankYouNote:
+      "Cảm ơn bạn đã đến chung vui và gửi những lời chúc yêu thương đến chúng mình.",
     accounts: [
       {
         owner: "Cô dâu",

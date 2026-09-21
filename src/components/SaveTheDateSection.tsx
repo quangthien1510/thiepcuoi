@@ -6,7 +6,7 @@ export default function SaveTheDateSection() {
   const { families, invitationLine, invitationNote, photos } = weddingData;
 
   return (
-    <section className="section-frame flex flex-col items-center gap-8 px-4 pt-10 pb-14 text-center sm:px-6">
+    <section className="section-frame flex flex-col items-center gap-8 px-4 pb-14 text-center sm:px-6">
       <div className="grid w-full grid-cols-5 gap-2">
         <RevealOnScroll direction="left" className="col-span-3">
           <PhotoPlaceholder
@@ -64,11 +64,12 @@ export default function SaveTheDateSection() {
         </RevealOnScroll>
       </div>
 
-      <p className="font-body text-base text-[var(--color-ink)]/90">
-        {invitationLine}
-      </p>
       <p className="max-w-[32rem] font-display text-sm italic leading-relaxed text-[var(--color-maroon)]/75">
         {invitationNote}
+      </p>
+
+      <p className="font-body text-base text-[var(--color-ink)]/90">
+        {invitationLine}
       </p>
 
       <div className="grid w-full grid-cols-6 items-stretch gap-2">
