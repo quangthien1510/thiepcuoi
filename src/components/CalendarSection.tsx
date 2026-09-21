@@ -32,7 +32,7 @@ export default function CalendarSection() {
     weddingDayOfWeek,
     weddingTime,
     lunarDate,
-    highlightDay,
+    highlightDays,
   } = weddingData;
 
   const weeks = buildMonthGrid(weddingDateISO);
@@ -79,9 +79,18 @@ export default function CalendarSection() {
               key={idx}
               className="relative flex h-6 items-center justify-center text-[var(--color-ink)]/80"
             >
-              {day && day === highlightDay ? (
+              {day && highlightDays.includes(day) ? (
                 <span className="relative flex h-6 w-6 items-center justify-center">
-                  <span className="absolute text-xl">❤️</span>
+                  <span
+                    className={`absolute text-xl ${
+                      day === 17
+                        ? "calendar-heart-from-left"
+                        : "calendar-heart-from-right"
+                    }`}
+                    style={{ animationDelay: day === 17 ? "350ms" : "650ms" }}
+                  >
+                    ❤️
+                  </span>
                   <span className="relative text-[11px] font-bold text-white">
                     {day}
                   </span>

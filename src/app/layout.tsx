@@ -3,13 +3,14 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Ngọc Hân & Quang Thiện - Thiệp cưới online",
-  description:
-    "Thân mời bạn đến chung vui trong ngày trọng đại của Ngọc Hân & Quang Thiện - 17.10.2026",
+    description:
+      "Thân mời bạn đến chung vui cùng Ngọc Hân & Quang Thiện trong hai ngày 17 & 18.10.2026",
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
+  minimumScale: 1,
   maximumScale: 1,
   userScalable: false,
   themeColor: "#6b2b2b",

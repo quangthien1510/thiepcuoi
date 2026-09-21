@@ -56,7 +56,13 @@ export default function PeopleTimelineSection() {
               const Icon = TIMELINE_ICONS[item.icon] ?? CarFlowerIcon;
               return (
                 <div key={item.label} className="flex flex-col items-center gap-2 text-center">
-                  <Icon className="h-10 w-10" />
+                  <RevealOnScroll
+                    direction={idx === 0 ? "left" : idx === 1 ? "up" : idx === 2 ? "right" : "zoom"}
+                    delayMs={idx * 280}
+                    distance={48}
+                  >
+                    <Icon className="h-10 w-10" />
+                  </RevealOnScroll>
                   <div className="relative flex h-4 w-full items-center justify-center">
                     <div className="absolute inset-y-0 left-0 right-0 my-auto h-px bg-[var(--color-maroon)]/50" />
                     <span className="relative text-sm text-[var(--color-maroon)]">♥</span>
@@ -75,18 +81,46 @@ export default function PeopleTimelineSection() {
         </div>
       </div>
 
-      <div className="grid grid-cols-6 gap-3 px-4 sm:px-6">
-        {timelineGallery.map((src, index) => (
+      <div className="grid grid-cols-6 items-stretch gap-2 px-4 sm:px-6">
+        <div className="col-span-3 flex min-h-20 items-center justify-center px-2 py-1 text-center">
+          <p className="font-script text-3xl leading-none tracking-wide text-[var(--color-maroon-deep)]">
+            Mãi bên nhau
+          </p>
+        </div>
+
+        <RevealOnScroll direction="right" className="col-span-3 row-span-2">
+          <PhotoPlaceholder
+            src={timelineGallery[0]}
+            label="Ảnh sau timeline 1"
+            fit="cover"
+            plain
+            className="aspect-[3/4] h-full w-full rounded-2xl"
+          />
+        </RevealOnScroll>
+
+        <RevealOnScroll direction="left" delayMs={80} className="col-span-3">
+          <PhotoPlaceholder
+            src={timelineGallery[1]}
+            label="Ảnh sau timeline 2"
+            fit="cover"
+            plain
+            className="aspect-[4/5] w-full rounded-2xl"
+          />
+        </RevealOnScroll>
+
+        {timelineGallery.slice(2).map((src, index) => (
           <RevealOnScroll
-            key={`${src}-${index}`}
+            key={`${src}-${index + 2}`}
             direction={index % 2 === 0 ? "left" : "right"}
-            delayMs={index * 80}
-            className={index < 2 ? "col-span-3" : "col-span-2"}
+            delayMs={(index + 2) * 80}
+            className="col-span-2"
           >
             <PhotoPlaceholder
               src={src}
-              label={`Ảnh sau timeline ${index + 1}`}
-              className="aspect-[2/3] w-full rounded-lg"
+              label={`Ảnh sau timeline ${index + 3}`}
+              fit="cover"
+              plain
+              className="aspect-[4/5] w-full rounded-2xl"
             />
           </RevealOnScroll>
         ))}

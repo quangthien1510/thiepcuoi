@@ -37,6 +37,7 @@ body {
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
+  touch-action: pan-y;
 }
 
 body {
@@ -70,6 +71,51 @@ body {
     var(--color-gold) 80%,
     transparent
   );
+}
+
+@keyframes calendar-heart-from-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-42px) scale(0.5) rotate(-18deg);
+  }
+  70% {
+    opacity: 1;
+    transform: translateX(5px) scale(1.12) rotate(5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes calendar-heart-from-right {
+  0% {
+    opacity: 0;
+    transform: translateX(42px) scale(0.5) rotate(18deg);
+  }
+  70% {
+    opacity: 1;
+    transform: translateX(-5px) scale(1.12) rotate(-5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1) rotate(0deg);
+  }
+}
+
+.calendar-heart-from-left,
+.calendar-heart-from-right {
+  animation-duration: 2.8s;
+  animation-timing-function: cubic-bezier(0.16, 0.9, 0.3, 1);
+  animation-fill-mode: both;
+}
+
+.calendar-heart-from-left {
+  animation-name: calendar-heart-from-left;
+}
+
+.calendar-heart-from-right {
+  animation-name: calendar-heart-from-right;
 }
 
 /* ---------- Motion ---------- */

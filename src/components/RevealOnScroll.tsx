@@ -15,10 +15,10 @@ type Props = {
 };
 
 const HIDDEN_TRANSFORM: Record<Direction, (distance: number) => string> = {
-  left: (d) => `translateX(-${d}px)`,
-  right: (d) => `translateX(${d}px)`,
-  up: (d) => `translateY(${d}px)`,
-  zoom: () => `scale(0.92)`,
+  left: (d) => `translate3d(-${d}px, 0, 0) rotate(-3deg) scale(0.98)`,
+  right: (d) => `translate3d(${d}px, 0, 0) rotate(3deg) scale(0.98)`,
+  up: (d) => `translate3d(0, ${d}px, 0) scale(0.96)`,
+  zoom: () => "scale(0.82) rotate(-2deg)",
 };
 
 export default function RevealOnScroll({
@@ -55,8 +55,10 @@ export default function RevealOnScroll({
       className={className}
       style={{
         opacity: visible ? 1 : 0,
-        transform: visible ? "translate(0, 0)" : HIDDEN_TRANSFORM[direction](distance),
-        transition: `opacity 2.8s cubic-bezier(0.16,0.9,0.3,1) ${delayMs}ms, transform 2.8s cubic-bezier(0.16,0.9,0.3,1) ${delayMs}ms`,
+        transform: visible
+          ? "translate3d(0, 0, 0) rotate(0deg) scale(1)"
+          : HIDDEN_TRANSFORM[direction](distance),
+        transition: `opacity 4s cubic-bezier(0.16,0.9,0.3,1) ${delayMs}ms, transform 4s cubic-bezier(0.16,0.9,0.3,1) ${delayMs}ms`,
         willChange: "opacity, transform",
       }}
     >

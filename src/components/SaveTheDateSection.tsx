@@ -3,7 +3,7 @@ import PhotoPlaceholder from "./PhotoPlaceholder";
 import RevealOnScroll from "./RevealOnScroll";
 
 export default function SaveTheDateSection() {
-  const { families, invitationLine, photos } = weddingData;
+  const { families, invitationLine, invitationNote, photos } = weddingData;
 
   return (
     <section className="section-frame flex flex-col items-center gap-8 px-4 pt-10 pb-14 text-center sm:px-6">
@@ -67,19 +67,53 @@ export default function SaveTheDateSection() {
       <p className="font-body text-base text-[var(--color-ink)]/90">
         {invitationLine}
       </p>
+      <p className="max-w-[32rem] font-display text-sm italic leading-relaxed text-[var(--color-maroon)]/75">
+        {invitationNote}
+      </p>
 
-      <div className="grid w-full grid-cols-6 gap-3">
-        {photos.gallery.map((src, index) => (
+      <div className="grid w-full grid-cols-6 items-stretch gap-2">
+        <RevealOnScroll direction="left" className="col-span-3 row-span-2">
+          <PhotoPlaceholder
+            src={photos.gallery[0]}
+            label="Khoảnh khắc cưới 1"
+            fit="cover"
+            plain
+            className="aspect-[3/4] h-full w-full rounded-lg"
+          />
+        </RevealOnScroll>
+
+        <RevealOnScroll direction="right" delayMs={80} className="col-span-3">
+          <PhotoPlaceholder
+            src={photos.gallery[1]}
+            label="Khoảnh khắc cưới 2"
+            fit="cover"
+            plain
+            className="aspect-[3/4] w-full rounded-lg"
+          />
+        </RevealOnScroll>
+
+        <div className="col-span-3 flex min-h-24 flex-col justify-center px-2 py-1 text-right">
+          <p className="font-script text-3xl leading-none text-[var(--color-maroon-deep)]">
+            Always &amp; forever
+          </p>
+          <p className="mt-2 font-body text-[11px] italic leading-relaxed text-[var(--color-maroon)]/80">
+            Cùng nhau viết tiếp những ngày bình yên.
+          </p>
+        </div>
+
+        {photos.gallery.slice(2).map((src, index) => (
           <RevealOnScroll
-            key={`${src}-${index}`}
+            key={`${src}-${index + 2}`}
             direction="up"
-            delayMs={index * 80}
-            className={index < 2 ? "col-span-3" : "col-span-2"}
+            delayMs={(index + 2) * 80}
+            className="col-span-2"
           >
             <PhotoPlaceholder
               src={src}
-              label={`Khoảnh khắc cưới ${index + 1}`}
-              className="aspect-[2/3] w-full rounded-lg"
+              label={`Khoảnh khắc cưới ${index + 3}`}
+              fit="cover"
+              plain
+              className="aspect-[3/4] w-full rounded-lg"
             />
           </RevealOnScroll>
         ))}

@@ -19,17 +19,33 @@ export default function MusicPlayer() {
       const target = event?.target;
       if (target instanceof Element && target.closest("[data-music-control]")) return;
 
-      void audio.play().then(() => setIsPlaying(true)).catch(() => {
-        // Autoplay bị chặn thì nút nhạc vẫn cho phép người dùng bật thủ công.
-      });
+      void audio
+        .play()
+        .then(() => {
+          setIsPlaying(true);
+          removeInteractionListeners();
+        })
+        .catch(() => {
+          // Trình duyệt sẽ cho phép phát lại ở lần chạm/kéo tiếp theo.
+        });
     };
 
-    window.addEventListener("pointerdown", startMusic, { passive: true });
-    window.addEventListener("keydown", startMusic);
+    const removeInteractionListeners = () => {
+      window.removeEventListener("pointerdown", startMusic, true);
+      window.removeEventListener("touchstart", startMusic, true);
+      window.removeEventListener("click", startMusic, true);
+      window.removeEventListener("keydown", startMusic, true);
+    };
+
+    // Thử autoplay ngay khi mở thiệp; nếu bị chặn, các tương tác đầu tiên sẽ bật nhạc.
+    startMusic();
+    window.addEventListener("pointerdown", startMusic, { capture: true, passive: true });
+    window.addEventListener("touchstart", startMusic, { capture: true, passive: true });
+    window.addEventListener("click", startMusic, true);
+    window.addEventListener("keydown", startMusic, true);
 
     return () => {
-      window.removeEventListener("pointerdown", startMusic);
-      window.removeEventListener("keydown", startMusic);
+      removeInteractionListeners();
     };
   }, []);
 
@@ -57,7 +73,8 @@ export default function MusicPlayer() {
       <audio
         ref={audioRef}
         src={weddingData.music.src}
-        preload="metadata"
+        preload="auto"
+        playsInline
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
         onError={() => setHasMusicError(true)}

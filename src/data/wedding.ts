@@ -6,7 +6,7 @@ export const weddingData = {
   // Nhạc sẽ bắt đầu sau lần chạm/click đầu tiên của khách (do chính sách mobile).
   music: {
     enabled: true,
-    src: "/music/wedding.mp3",
+    src: "/music/LỄ ĐƯỜNG của Hải Long & Salim  KAI ĐINH  Official MV - Kai Dinh Official (youtube).opus",
     volume: 0.45,
   },
   // Chỉ cần thêm ảnh vào public/images/ rồi khai báo đường dẫn tại đây.
@@ -57,11 +57,11 @@ export const weddingData = {
 
   // ISO datetime dùng để tính đếm ngược
   weddingDateISO: "2026-10-17T10:30:00+07:00",
-  weddingDateDisplay: "17.10.2026",
-  weddingDayOfWeek: "THỨ BẢY",
+  weddingDateDisplay: "17 & 18.10.2026",
+  weddingDayOfWeek: "THỨ BẢY & CHỦ NHẬT",
   weddingTime: "10:30",
   lunarDate: "Nhằm ngày 8 tháng 9 năm Ất Tỵ",
-  highlightDay: 17,
+  highlightDays: [17, 18],
 
   families: {
     bride: {
@@ -79,6 +79,8 @@ export const weddingData = {
   },
 
   invitationLine: "Thân mời đến dự lễ thành hôn của chúng mình",
+  invitationNote:
+    "Hai ngày chung vui, hai dấu mốc yêu thương và một hành trình trọn đời bên nhau.",
 
   venues: {
     bride: {
@@ -99,12 +101,12 @@ export const weddingData = {
     bride: {
       role: "Cô dâu",
       name: "Ngọc Hân",
-      birth: "20/12/2001",
+      birth: "3/1/2006",
     },
     groom: {
       role: "Chú rể",
       name: "Quang Thiện",
-      birth: "05/08/1995",
+      birth: "15/10/2004",
     },
   },
 
