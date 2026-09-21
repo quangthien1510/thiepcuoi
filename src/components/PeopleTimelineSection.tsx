@@ -15,6 +15,7 @@ const TIMELINE_ICONS: Record<string, React.ComponentType<{ className?: string }>
 
 export default function PeopleTimelineSection() {
   const { people, timeline, photos } = weddingData;
+  const timelineGallery = photos.extraPhotos.slice(0, 5);
 
   return (
     <section className="section-frame flex flex-col gap-10 pt-14 pb-14">
@@ -26,7 +27,7 @@ export default function PeopleTimelineSection() {
           <p className="font-display text-xl font-semibold text-[var(--color-maroon-deep)]">
             {people.groom.name}
           </p>
-          <p className="text-sm text-[var(--color-ink)]/60">{people.groom.birth}</p>
+          <p className="font-body text-sm text-[var(--color-ink)]/60">{people.groom.birth}</p>
         </RevealOnScroll>
         <RevealOnScroll direction="right" delayMs={100} className="w-1/2">
           <PhotoPlaceholder
@@ -73,6 +74,24 @@ export default function PeopleTimelineSection() {
           </div>
         </div>
       </div>
+
+      <div className="grid grid-cols-6 gap-3 px-6">
+        {timelineGallery.map((src, index) => (
+          <RevealOnScroll
+            key={src}
+            direction={index % 2 === 0 ? "left" : "right"}
+            delayMs={index * 80}
+            className={index < 2 ? "col-span-3" : "col-span-2"}
+          >
+            <PhotoPlaceholder
+              src={src}
+              label={`Ảnh sau timeline ${index + 1}`}
+              className="aspect-[2/3] w-full rounded-lg"
+            />
+          </RevealOnScroll>
+        ))}
+      </div>
+
     </section>
   );
 }

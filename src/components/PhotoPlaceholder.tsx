@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type PhotoPlaceholderProps = {
   label?: string;
   className?: string;
@@ -16,12 +18,13 @@ export default function PhotoPlaceholder({
       className={`relative flex flex-col items-center justify-center gap-2 overflow-hidden border border-dashed border-[var(--color-gold)]/50 bg-gradient-to-br from-[#efe2d3] via-[#f6ede1] to-[#e7d3c9] text-[var(--color-maroon)]/70 ${className}`}
     >
       {src ? (
-        <img
+        <Image
           src={src}
           alt={label || "Ảnh cưới"}
-          className="absolute inset-0 h-full w-full object-cover"
-          loading="lazy"
-          decoding="async"
+          fill
+          sizes="(max-width: 500px) 100vw, 500px"
+          quality={100}
+          className="object-cover"
         />
       ) : (
         <>

@@ -39,7 +39,7 @@ export default function SaveTheDateSection() {
           <h3 className="font-display text-lg font-semibold text-[var(--color-maroon)]">
             {families.bride.title}
           </h3>
-          <p className="text-sm leading-relaxed text-[var(--color-ink)]/80">
+          <p className="font-body text-sm leading-relaxed text-[var(--color-ink)]/80">
             {families.bride.father}
             <br />
             {families.bride.mother}
@@ -54,7 +54,7 @@ export default function SaveTheDateSection() {
           <h3 className="font-display text-lg font-semibold text-[var(--color-maroon)]">
             {families.groom.title}
           </h3>
-          <p className="text-sm leading-relaxed text-[var(--color-ink)]/80">
+          <p className="font-body text-sm leading-relaxed text-[var(--color-ink)]/80">
             {families.groom.father}
             <br />
             {families.groom.mother}
@@ -67,6 +67,23 @@ export default function SaveTheDateSection() {
       <p className="font-body text-base text-[var(--color-ink)]/90">
         {invitationLine}
       </p>
+
+      <div className="grid w-full grid-cols-6 gap-3">
+        {photos.gallery.map((src, index) => (
+          <RevealOnScroll
+            key={src}
+            direction="up"
+            delayMs={index * 80}
+            className={index < 2 ? "col-span-3" : "col-span-2"}
+          >
+            <PhotoPlaceholder
+              src={src}
+              label={`Khoảnh khắc cưới ${index + 1}`}
+              className="aspect-[2/3] w-full rounded-lg"
+            />
+          </RevealOnScroll>
+        ))}
+      </div>
     </section>
   );
 }

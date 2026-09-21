@@ -14,23 +14,35 @@ export const weddingData = {
   photos: {
     // Thêm file ảnh vào public/images/ rồi chỉ sửa tên file tại đây.
     // Ví dụ: cover: "/images/cover.jpg"
-    cover: "/images/CND01667.jpg",
-    saveTheDate1: "/images/CND-save-01.jpg",
-    saveTheDate2: "/images/CND-save-02.jpg",
-    groom: "/images/CND-groom.jpg",
-    bride: "/images/CND01820.jpg",
-    timeline: "/images/CND-timeline.jpg",
-    // Năm ảnh lớn hiển thị trong khu vực Khoảnh khắc.
+    cover: "/images/THIỆN _ HÂN OK/CND01667.jpg",
+    saveTheDate1: "/images/THIỆN _ HÂN OK/CND01034.jpg",
+    saveTheDate2: "/images/THIỆN _ HÂN OK/CND01045.jpg",
+    groom: "/images/THIỆN _ HÂN OK/CND01127.jpg",
+    bride: "/images/THIỆN _ HÂN OK/CND01131.jpg",
+    timeline: "/images/THIỆN _ HÂN OK/CND01185.jpg",
+    // Năm ảnh hiển thị trong khu vực Khoảnh khắc.
     gallery: [
-      "/images/CND-save-01.jpg",
-      "/images/CND-save-02.jpg",
-      "/images/CND-groom.jpg",
-      "/images/CND-timeline.jpg",
-      "/images/CND-avatar.jpg",
+      "/images/THIỆN _ HÂN OK/CND01217.jpg",
+      "/images/THIỆN _ HÂN OK/CND01230.jpg",
+      "/images/THIỆN _ HÂN OK/CND01563.jpg",
+      "/images/THIỆN _ HÂN OK/CND01683.jpg",
+      "/images/THIỆN _ HÂN OK/CND01734.jpg",
+    ],
+    // Chín ảnh bổ sung, phân bổ ở các phần khác nhau của thiệp.
+    extraPhotos: [
+      "/images/THIỆN _ HÂN OK/CND01781.jpg",
+      "/images/THIỆN _ HÂN OK/CND01820.jpg",
+      "/images/THIỆN _ HÂN OK/CND01833.jpg",
+      "/images/THIỆN _ HÂN OK/CND01910.jpg",
+      "/images/THIỆN _ HÂN OK/CND01927.jpg",
+      "/images/THIỆN _ HÂN OK/CND02041.jpg",
+      "/images/THIỆN _ HÂN OK/CND02056.jpg",
+      "/images/THIỆN _ HÂN OK/CND02090_2.jpg",
+      "/images/THIỆN _ HÂN OK/CND02108.jpg",
     ],
     // Ảnh đại diện hiển thị trên nút mở/đóng khung lời chúc (góc dưới màn hình).
     // Nên dùng ảnh vuông, cận mặt (giống avatar chat) để hiện rõ khi thu nhỏ.
-    avatar: "/images/CND-avatar.jpg",
+    avatar: "/images/THIỆN _ HÂN OK/CND02090_2.jpg",
   },
   couple: {
     groomName: "Quang Thiện",
@@ -72,11 +84,19 @@ export const weddingData = {
 
   invitationLine: "Thân mời đến dự lễ thành hôn của chúng mình",
 
-  venue: {
-    label: "Địa điểm",
-    name: "Tại tư gia nhà trai",
-    address: "Số 1 Lương Yên, Bạch Đằng, HN",
-    mapQuery: "Số 1 Lương Yên, Bạch Đằng, Hai Ba Trung, Ha Noi",
+  venues: {
+    bride: {
+      label: "Địa điểm nhà gái",
+      name: "Tại tư gia nhà gái",
+      address: "Vui lòng cập nhật địa chỉ nhà gái",
+      mapQuery: "",
+    },
+    groom: {
+      label: "Địa điểm nhà trai",
+      name: "Tại tư gia nhà trai",
+      address: "Số 1 Lương Yên, Bạch Đằng, HN",
+      mapQuery: "Số 1 Lương Yên, Bạch Đằng, Hai Ba Trung, Ha Noi",
+    },
   },
 
   people: {

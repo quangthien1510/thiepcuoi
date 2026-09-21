@@ -3,7 +3,6 @@ import SaveTheDateSection from "@/components/SaveTheDateSection";
 import CalendarSection from "@/components/CalendarSection";
 import LocationSection from "@/components/LocationSection";
 import PeopleTimelineSection from "@/components/PeopleTimelineSection";
-import PhotoGallerySection from "@/components/PhotoGallerySection";
 import RSVPSection from "@/components/RSVPSection";
 import GiftSection from "@/components/GiftSection";
 import FloatingWidgets from "@/components/FloatingWidgets";
@@ -21,7 +20,6 @@ export default function Home() {
       <CalendarSection />
       <LocationSection />
       <PeopleTimelineSection />
-      <PhotoGallerySection />
       <RSVPSection />
       <GiftSection />
 
