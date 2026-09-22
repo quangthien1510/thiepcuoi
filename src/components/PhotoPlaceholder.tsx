@@ -10,6 +10,7 @@ type PhotoPlaceholderProps = {
   icon?: string;
   src?: string;
   fit?: "cover" | "contain";
+  objectPosition?: string;
   plain?: boolean;
 };
 
@@ -19,6 +20,7 @@ export default function PhotoPlaceholder({
   icon = "📷",
   src,
   fit = "cover",
+  objectPosition = "center",
   plain = false,
 }: PhotoPlaceholderProps) {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
@@ -56,6 +58,7 @@ export default function PhotoPlaceholder({
             sizes="(max-width: 640px) 100vw, 800px"
             quality={82}
             className={`${fit === "contain" ? "object-contain" : "object-cover"} rounded-2xl`}
+            style={{ objectPosition }}
           />
         ) : (
           <>

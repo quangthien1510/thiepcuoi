@@ -47,16 +47,16 @@ export default function Countdown({ targetISO }: Props) {
   const display = timeLeft ?? { days: 0, hours: 0, minutes: 0, seconds: 0 };
 
   return (
-    <div className="grid grid-cols-4 gap-2">
+    <div className="grid grid-cols-4 gap-5 font-[Arial]">
       {UNITS.map((unit) => (
         <div
           key={unit.key}
-          className="flex flex-col items-center justify-center gap-1 rounded-xl bg-[var(--color-maroon-deep)]/90 px-2 py-3 text-[var(--color-cream)] shadow-lg backdrop-blur-sm"
+          className="flex flex-col items-center justify-center gap-1 rounded-md bg-[var(--color-maroon-deep)]/90 px-2 py-2.5 text-[var(--color-cream)] shadow-lg backdrop-blur-sm"
         >
-          <span className="font-display text-2xl font-bold tabular-nums">
+          <span className="text-sm font-normal tabular-nums">
             {String(display[unit.key]).padStart(2, "0")}
           </span>
-          <span className="text-[10px] uppercase tracking-wide opacity-80">
+          <span className="text-[10px] font-bold uppercase tracking-wide opacity-80">
             {unit.label}
           </span>
         </div>

@@ -38,46 +38,49 @@ export default function CalendarSection() {
   const weeks = buildMonthGrid(weddingDateISO);
 
   return (
-    <section className="section-frame flex flex-col items-center gap-6 px-6  text-center">
+    <section className="section-frame flex flex-col items-center gap-10 px-6 text-center">
       <h2 className="flex flex-col items-center font-script text-4xl leading-tight text-[var(--color-ink)]">
-        <RevealOnScroll direction="left" distance={70}>
+        <RevealOnScroll direction="left" distance={70} className="pr-30">
           {couple.brideName}
         </RevealOnScroll>
-        <RevealOnScroll direction="up" delayMs={150} className="my-1 text-3xl">
+        <RevealOnScroll direction="up" delayMs={150} className="my-2 text-3xl">
           &amp;
         </RevealOnScroll>
-        <RevealOnScroll direction="right" delayMs={100} distance={70}>
+        <RevealOnScroll direction="right" delayMs={100} distance={70} className="pl-30">
           {couple.groomName}
         </RevealOnScroll>
       </h2>
 
-      <div className="flex flex-col gap-1">
-        <p className="text-sm tracking-wide text-[var(--color-ink)]/70">
+      <div className="flex flex-col gap-4">
+        <p className="text-xl font-semibold tracking-wide text-[var(--color-ink)]">
           Được tổ chức vào lúc
         </p>
-        <p className="font-display text-2xl font-bold tracking-wide text-[var(--color-maroon-deep)]">
+        <p className="font-display text-2xl font-bold tracking-wide text-[var(--color-ink)]">
           {weddingTime} - {weddingDayOfWeek}
         </p>
-        <p className="font-display text-2xl font-bold tracking-wide text-[var(--color-maroon-deep)]">
+        <p className="font-display text-2xl font-bold tracking-wide text-[var(--color-ink)]">
           {weddingDateDisplay}
         </p>
-        <p className="text-sm text-[var(--color-ink)]/60">{lunarDate}</p>
+        <p className="text-sm font-semibold text-[var(--color-ink)]">{lunarDate}</p>
       </div>
 
-      <RevealOnScroll direction="zoom" className="relative w-full max-w-xs rounded-lg border border-[var(--color-gold)]/30 bg-[var(--color-cream)] p-4 pt-8 shadow-sm">
+      <RevealOnScroll
+        direction="zoom"
+        className="relative w-full max-w-xs rounded-lg border border-[var(--color-gold)]/30 bg-[var(--color-cream)] p-4 pt-8 shadow-sm"
+      >
         <span className="absolute -top-3 left-1/2 -translate-x-1/2 text-2xl">
           📎
         </span>
         <div className="grid grid-cols-7 gap-y-3 text-xs">
           {WEEKDAY_LABELS.map((label) => (
-            <span key={label} className="font-semibold text-[var(--color-ink)]/50">
+            <span key={label} className="font-semibold text-[var(--color-ink)]">
               {label}
             </span>
           ))}
           {weeks.flat().map((day, idx) => (
             <span
               key={idx}
-              className="relative flex h-6 items-center justify-center text-[var(--color-ink)]/80"
+              className="relative flex h-6 items-center justify-center font-semibold text-[var(--color-ink)]"
             >
               {day && highlightDays.includes(day) ? (
                 <span className="relative flex h-6 w-6 items-center justify-center">

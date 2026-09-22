@@ -11,6 +11,7 @@
   --color-ink: #203129;
   --color-gold: #b29a63;
   --color-paper: #ffffff;
+  --color-background: color-mix(in srgb, var(--color-cream-deep) 40%, white);
 }
 
 @theme inline {
@@ -41,7 +42,12 @@ body {
 }
 
 body {
-  background: linear-gradient(135deg, #f7fbf7 0%, var(--color-cream) 45%, #edf5ee 100%);
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--color-cream-deep) 30%, white),
+    var(--color-background) 48%,
+    color-mix(in srgb, var(--color-cream-deep) 44%, white)
+  );
   color: var(--color-ink);
   font-family: var(--font-body), sans-serif;
   -webkit-tap-highlight-color: transparent;
