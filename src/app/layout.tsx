@@ -6,17 +6,17 @@ const siteUrl = "https://thiepcuoi-phi.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
-  title: "Ngọc Hân & Quang Thiện - Thiệp cưới online",
+  title: "Quang Thiện & Ngọc Hân - Thiệp cưới online",
 
   description:
-    "Thân mời bạn đến chung vui cùng Ngọc Hân & Quang Thiện trong hai ngày 17 & 18.10.2026",
+    "Thân mời bạn đến chung vui cùng Quang Thiện & Ngọc Hân trong hai ngày 17 & 18.10.2026",
 
   openGraph: {
-    title: "Ngọc Hân & Quang Thiện - Thiệp cưới online",
+    title: "Quang Thiện & Ngọc Hân - Thiệp cưới online",
     description:
-      "Thân mời bạn đến chung vui cùng Ngọc Hân & Quang Thiện trong hai ngày 17 & 18.10.2026",
+      "Thân mời bạn đến chung vui cùng Quang Thiện & Ngọc Hân trong hai ngày 17 & 18.10.2026",
     url: siteUrl,
-    siteName: "Ngọc Hân & Quang Thiện - Thiệp cưới online",
+    siteName: "Quang Thiện & Ngọc Hân - Thiệp cưới online",
     type: "website",
     locale: "vi_VN",
 
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Ngọc Hân & Quang Thiện - Thiệp cưới online",
+    title: "Quang Thiện & Ngọc Hân - Thiệp cưới online",
     description:
-      "Thân mời bạn đến chung vui cùng Ngọc Hân & Quang Thiện trong hai ngày 17 & 18.10.2026",
+      "Thân mời bạn đến chung vui cùng Quang Thiện & Ngọc Hân trong hai ngày 17 & 18.10.2026",
     images: [`${siteUrl}/images/og-image.jpg`],
   },
 

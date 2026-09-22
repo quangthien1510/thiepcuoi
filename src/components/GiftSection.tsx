@@ -95,9 +95,9 @@ export default function GiftSection() {
       <RevealOnScroll direction="up" className="flex items-center justify-center gap-4 pt-4">
         <span className="animate-couple-sway inline-block h-24 w-24 overflow-hidden rounded-full border-2 border-[var(--color-gold)]/60 shadow-md">
           <PhotoPlaceholder
-            src={photos.bride}
+            src={photos.groom}
             label=""
-            icon="👰"
+            icon="🤵"
             objectPosition="center top"
             className="h-full w-full rounded-full border-0"
           />
@@ -105,9 +105,9 @@ export default function GiftSection() {
         <span className="animate-heartbeat text-3xl">💕</span>
         <span className="animate-couple-sway-reverse inline-block h-24 w-24 overflow-hidden rounded-full border-2 border-[var(--color-gold)]/60 shadow-md">
           <PhotoPlaceholder
-            src={photos.groom}
+            src={photos.bride}
             label=""
-            icon="🤵"
+            icon="👰"
             objectPosition="center top"
             className="h-full w-full rounded-full border-0"
           />

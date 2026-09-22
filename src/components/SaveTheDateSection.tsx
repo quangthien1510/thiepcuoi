@@ -77,14 +77,14 @@ export default function SaveTheDateSection() {
       <div className="grid w-full grid-cols-[1fr_auto_1fr] gap-4">
         <RevealOnScroll direction="left" className="flex flex-col gap-1">
           <h3 className="font-display text-lg font-semibold text-[var(--color-maroon)]">
-            {families.bride.title}
+            {families.groom.title}
           </h3>
           <p style={familyInfoStyle}>
-            {families.bride.father}
+            {families.groom.father}
             <br />
-            {families.bride.mother}
+            {families.groom.mother}
             <br />
-            {families.bride.address}
+            {families.groom.address}
           </p>
         </RevealOnScroll>
 
@@ -95,14 +95,14 @@ export default function SaveTheDateSection() {
 
         <RevealOnScroll direction="right" className="flex flex-col gap-1">
           <h3 className="font-display text-lg font-semibold text-[var(--color-maroon)]">
-            {families.groom.title}
+            {families.bride.title}
           </h3>
           <p style={familyInfoStyle}>
-            {families.groom.father}
+            {families.bride.father}
             <br />
-            {families.groom.mother}
+            {families.bride.mother}
             <br />
-            {families.groom.address}
+            {families.bride.address}
           </p>
         </RevealOnScroll>
       </div>

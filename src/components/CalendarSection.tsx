@@ -35,13 +35,13 @@ export default function CalendarSection() {
     <section className="section-frame flex flex-col items-center gap-10 px-6 text-center">
       <h2 className="flex flex-col items-center font-script text-4xl leading-tight text-[var(--color-ink)]">
         <RevealOnScroll direction="left" distance={70} className="pr-30">
-          {couple.brideName}
+          {couple.groomName}
         </RevealOnScroll>
         <RevealOnScroll direction="up" delayMs={150} className="my-2 text-3xl">
           &amp;
         </RevealOnScroll>
         <RevealOnScroll direction="right" delayMs={100} distance={70} className="pl-30">
-          {couple.groomName}
+          {couple.brideName}
         </RevealOnScroll>
       </h2>
 

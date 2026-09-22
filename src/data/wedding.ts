@@ -129,18 +129,18 @@ export const weddingData = {
       "Cảm ơn bạn đã đến chung vui và gửi những lời chúc yêu thương đến chúng mình.",
     accounts: [
       {
+        owner: "Chú rể",
+        name: "Nguyễn Quang Thiện",
+        bank: "MB Bank",
+        accountNumber: "0969152065",
+        qrImage: "",
+      },
+      {
         owner: "Cô dâu",
         name: "Nguyễn Ngọc Hân",
         bank: "MB Bank",
         accountNumber: "1234567890",
         // Ảnh QR chuyển khoản: đặt file ảnh vào public/images/ rồi sửa đường dẫn tại đây.
-        qrImage: "",
-      },
-      {
-        owner: "Chú rể",
-        name: "Nguyễn Quang Thiện",
-        bank: "MB Bank",
-        accountNumber: "0969152065",
         qrImage: "",
       },
     ],

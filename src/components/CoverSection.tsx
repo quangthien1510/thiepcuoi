@@ -43,7 +43,7 @@ export default function CoverSection() {
 
         <h1 className="flex flex-col items-center font-display text-3xl font-bold tracking-wide text-[var(--color-maroon-deep)]">
           <RevealOnScroll direction="left" distance={80} className="pr-35">
-            <span style={coupleNameStyle}>{couple.brideName}</span>
+            <span style={coupleNameStyle}>{couple.groomName}</span>
           </RevealOnScroll>
           <RevealOnScroll direction="up" delayMs={150} className="my-2 flex items-center justify-center ">
             <span className="block font-script text-2xl font-normal text-[var(--color-rose)]">
@@ -51,7 +51,7 @@ export default function CoverSection() {
             </span>
           </RevealOnScroll>
           <RevealOnScroll direction="right" delayMs={100} distance={80} className="pl-40">
-            <span style={coupleNameStyle}>{couple.groomName}</span>
+            <span style={coupleNameStyle}>{couple.brideName}</span>
           </RevealOnScroll>
         </h1>
 

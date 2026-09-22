@@ -7,7 +7,7 @@ import RevealOnScroll from "./RevealOnScroll";
 
 export default function LocationSection() {
   const { venues, people, photos } = weddingData;
-  const [selectedVenue, setSelectedVenue] = useState<"bride" | "groom">("bride");
+  const [selectedVenue, setSelectedVenue] = useState<"bride" | "groom">("groom");
   const venue = venues[selectedVenue];
   const mapSrc = venue.mapQuery
     ? `https://www.google.com/maps?q=${encodeURIComponent(
@@ -20,7 +20,7 @@ export default function LocationSection() {
       <div className="divider-hairline h-px w-full" />
 
       <div className="grid grid-cols-2 gap-2 rounded-xl bg-[var(--color-cream-deep)]/55 p-1">
-        {(["bride", "groom"] as const).map((venueType) => {
+        {(["groom", "bride"] as const).map((venueType) => {
           const isSelected = selectedVenue === venueType;
           return (
             <button
@@ -76,20 +76,20 @@ export default function LocationSection() {
       <div className="flex items-center gap-4">
         <RevealOnScroll direction="left" className="w-[58%]">
           <PhotoPlaceholder
-            src={photos.bride}
-            label="Ảnh cô dâu"
-            icon="👰"
+            src={photos.groom}
+            label="Ảnh chú rể"
+            icon="🤵"
             className="aspect-[2.5/4] w-full rounded-xl"
           />
         </RevealOnScroll>
         <RevealOnScroll direction="right" delayMs={100} className="flex flex-1 flex-col items-center gap-1 text-center">
           <p className="font-script text-2xl text-[var(--color-rose)]">
-            {people.bride.role}
+            {people.groom.role}
           </p>
           <p className="font-display text-xl font-semibold text-[var(--color-maroon-deep)]">
-            {people.bride.name}
+            {people.groom.name}
           </p>
-          <p className="font-body text-sm text-[var(--color-ink)]/60">{people.bride.birth}</p>
+          <p className="font-body text-sm text-[var(--color-ink)]/60">{people.groom.birth}</p>
         </RevealOnScroll>
       </div>
 
