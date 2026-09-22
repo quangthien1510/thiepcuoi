@@ -1,10 +1,42 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
+  ? new URL(process.env.NEXT_PUBLIC_SITE_URL)
+  : process.env.VERCEL_URL
+    ? new URL(`https://${process.env.VERCEL_URL}`)
+    : new URL("http://localhost:3000");
+
 export const metadata: Metadata = {
+  metadataBase: siteUrl,
   title: "Ngọc Hân & Quang Thiện - Thiệp cưới online",
+  description:
+    "Thân mời bạn đến chung vui cùng Ngọc Hân & Quang Thiện trong hai ngày 17 & 18.10.2026",
+  openGraph: {
+    title: "Ngọc Hân & Quang Thiện - Thiệp cưới online",
     description:
       "Thân mời bạn đến chung vui cùng Ngọc Hân & Quang Thiện trong hai ngày 17 & 18.10.2026",
+    type: "website",
+    locale: "vi_VN",
+    images: [
+      {
+        url: "/images/CND018333.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Ảnh cưới Ngọc Hân và Quang Thiện",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ngọc Hân & Quang Thiện - Thiệp cưới online",
+    description:
+      "Thân mời bạn đến chung vui cùng Ngọc Hân & Quang Thiện trong hai ngày 17 & 18.10.2026",
+    images: ["/images/CND018333.jpg"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export const viewport: Viewport = {
@@ -36,3 +68,4 @@ export default function RootLayout({
     </html>
   );
 }
+
