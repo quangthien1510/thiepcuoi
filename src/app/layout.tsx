@@ -22,9 +22,9 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: `${siteUrl}/images/CND018332.jpg`,
-        width: 1200,
-        height: 630,
+        url: `${siteUrl}/images/og-image.jpg`,
+        width: 4672,
+        height: 2453,
         type: "image/jpeg",
         alt: "Ảnh cưới Ngọc Hân và Quang Thiện",
       },
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "Ngọc Hân & Quang Thiện - Thiệp cưới online",
     description:
       "Thân mời bạn đến chung vui cùng Ngọc Hân & Quang Thiện trong hai ngày 17 & 18.10.2026",
-    images: [`${siteUrl}/images/CND018332.jpg`],
+    images: [`${siteUrl}/images/og-image.jpg`],
   },
 
   icons: {
