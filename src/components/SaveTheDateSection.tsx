@@ -4,6 +4,20 @@ import RevealOnScroll from "./RevealOnScroll";
 
 export default function SaveTheDateSection() {
   const { families, invitationLine, invitationNote, photos } = weddingData;
+  const familyInfoStyle = {
+    color: "rgb(0, 0, 0)",
+    textShadow: "none",
+    fontSize: "16.38px",
+    fontWeight: 500,
+    fontFamily: '"scarlet-bradley.regular", serif',
+    textAlign: "center" as const,
+    lineHeight: "normal",
+    letterSpacing: "0px",
+    textTransform: "none" as const,
+    textDecoration: "none",
+    fontStyle: "normal" as const,
+    wordBreak: "break-word" as const,
+  };
 
   return (
     <section className="section-frame flex flex-col items-center gap-8 px-4 pb-14 text-center sm:px-6">
@@ -26,20 +40,46 @@ export default function SaveTheDateSection() {
         </RevealOnScroll>
       </div>
 
-      <h2 className="font-display text-5xl font-bold leading-[1.05] text-[var(--color-maroon-deep)]">
-        SAVE
-        <span className="block text-2xl font-normal italic text-[var(--color-rose)]">
-          the
-        </span>
-        DATE
-      </h2>
+      <RevealOnScroll direction="zoom" distance={0}>
+        <h2
+          className="text-center"
+          style={{
+            fontSize: "55.82px",
+            fontWeight: 500,
+            fontFamily: '"scarlet-bradley.regular", serif',
+            lineHeight: "normal",
+            letterSpacing: "0px",
+            textTransform: "none",
+            textDecoration: "none",
+            fontStyle: "normal",
+          }}
+        >
+          <span className="pr-40">SAVE</span>
+          <span
+            className="block py-2 text-center"
+            style={{
+              fontSize: "32.76px",
+              fontWeight: 500,
+              fontFamily: '"scarlet-bradley.regular", serif',
+              lineHeight: "normal",
+              letterSpacing: "0px",
+              textTransform: "none",
+              textDecoration: "none",
+              fontStyle: "normal",
+            }}
+          >
+            the
+          </span>
+          <span className="pl-40">DATE</span>
+        </h2>
+      </RevealOnScroll>
 
       <div className="grid w-full grid-cols-[1fr_auto_1fr] gap-4">
         <RevealOnScroll direction="left" className="flex flex-col gap-1">
           <h3 className="font-display text-lg font-semibold text-[var(--color-maroon)]">
             {families.bride.title}
           </h3>
-          <p className="font-body text-sm leading-relaxed text-[var(--color-ink)]/80">
+          <p style={familyInfoStyle}>
             {families.bride.father}
             <br />
             {families.bride.mother}
@@ -48,13 +88,16 @@ export default function SaveTheDateSection() {
           </p>
         </RevealOnScroll>
 
-        <div className="divider-hairline w-px self-stretch bg-[var(--color-gold)]/40" />
+        <div
+          className="w-[2px] self-stretch bg-[var(--color-maroon)]"
+          aria-hidden="true"
+        />
 
         <RevealOnScroll direction="right" className="flex flex-col gap-1">
           <h3 className="font-display text-lg font-semibold text-[var(--color-maroon)]">
             {families.groom.title}
           </h3>
-          <p className="font-body text-sm leading-relaxed text-[var(--color-ink)]/80">
+          <p style={familyInfoStyle}>
             {families.groom.father}
             <br />
             {families.groom.mother}
@@ -64,13 +107,32 @@ export default function SaveTheDateSection() {
         </RevealOnScroll>
       </div>
 
-      <p className="max-w-[32rem] font-display text-sm italic leading-relaxed text-[var(--color-maroon)]/75">
-        {invitationNote}
-      </p>
+      <RevealOnScroll direction="up" delayMs={150} distance={24}>
+        <p className="max-w-[32rem] font-display text-sm italic leading-relaxed text-[var(--color-maroon)]/75">
+          {invitationNote}
+        </p>
+      </RevealOnScroll>
 
-      <p className="font-body text-base text-[var(--color-ink)]/90">
-        {invitationLine}
-      </p>
+      <RevealOnScroll direction="up" delayMs={250} distance={24}>
+        <p
+          className="text-center"
+          style={{
+            color: "rgb(0, 0, 0)",
+            textShadow: "none",
+            fontSize: "17.16px",
+            fontWeight: 500,
+            fontFamily: '"PlayfairDisplay", serif',
+            lineHeight: "normal",
+            letterSpacing: "0px",
+            textTransform: "none",
+            textDecoration: "none",
+            fontStyle: "normal",
+            wordBreak: "break-word",
+          }}
+        >
+          {invitationLine}
+        </p>
+      </RevealOnScroll>
 
       <div className="grid w-full grid-cols-6 items-stretch gap-2">
         <RevealOnScroll direction="left" className="col-span-3 row-span-2">
@@ -93,14 +155,14 @@ export default function SaveTheDateSection() {
           />
         </RevealOnScroll>
 
-        <div className="col-span-3 flex min-h-24 flex-col justify-center px-2 py-1 text-right">
+        <RevealOnScroll direction="left" className="col-span-3 flex min-h-24 flex-col justify-center px-2 py-1 text-right">
           <p className="font-script text-3xl leading-none text-[var(--color-maroon-deep)]">
             Always &amp; forever
           </p>
           <p className="mt-2 font-body text-[11px] italic leading-relaxed text-[var(--color-maroon)]/80">
             Cùng nhau viết tiếp những ngày bình yên.
           </p>
-        </div>
+        </RevealOnScroll>
 
         {photos.gallery.slice(2).map((src, index) => (
           <RevealOnScroll

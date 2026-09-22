@@ -14,16 +14,16 @@ export default function Home() {
     <>
       <ScrollToTop />
       <MusicPlayer />
-      <main className="relative mx-auto min-h-screen w-full max-w-[800px] overflow-x-hidden bg-[var(--color-cream)] pb-16">
-      <CoverSection />
-      <SaveTheDateSection />
-      <CalendarSection />
-      <LocationSection />
-      <PeopleTimelineSection />
-      <RSVPSection />
-      <GiftSection />
+      <main className="wedding-container relative mx-auto min-h-screen w-full max-w-[800px] overflow-x-hidden bg-[var(--color-background)] pb-16">
+        <CoverSection />
+        <SaveTheDateSection />
+        <CalendarSection />
+        <LocationSection />
+        <PeopleTimelineSection />
+        <RSVPSection />
+        <GiftSection />
 
-      <FloatingWidgets />
+        <FloatingWidgets />
       </main>
     </>
   );

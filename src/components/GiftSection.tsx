@@ -98,6 +98,7 @@ export default function GiftSection() {
             src={photos.bride}
             label=""
             icon="👰"
+            objectPosition="center top"
             className="h-full w-full rounded-full border-0"
           />
         </span>
@@ -107,6 +108,7 @@ export default function GiftSection() {
             src={photos.groom}
             label=""
             icon="🤵"
+            objectPosition="center top"
             className="h-full w-full rounded-full border-0"
           />
         </span>
