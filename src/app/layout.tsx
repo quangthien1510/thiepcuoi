@@ -1,7 +1,8 @@
 import type { Metadata, Viewport } from "next";
+import { headers } from "next/headers";
 import "./globals.css";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
+const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL
   ? new URL(process.env.NEXT_PUBLIC_SITE_URL)
   : process.env.VERCEL_URL
     ? new URL(`https://${process.env.VERCEL_URL}`)
@@ -10,9 +11,16 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
 const siteTitle = "Ngọc Hân & Quang Thiện - Thiệp cưới online";
 const siteDescription =
   "Thân mời bạn đến chung vui cùng Ngọc Hân & Quang Thiện trong hai ngày 17 & 18.10.2026";
+const facebookAppId = process.env.NEXT_PUBLIC_FACEBOOK_APP_ID;
 
-export const metadata: Metadata = {
-  metadataBase: siteUrl,
+export async function generateMetadata(): Promise<Metadata> {
+  const requestHeaders = await headers();
+  const host = requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host");
+  const protocol = requestHeaders.get("x-forwarded-proto") ?? "https";
+  const siteUrl = host ? new URL(`${protocol}://${host}`) : configuredSiteUrl;
+
+  return {
+    metadataBase: siteUrl,
   title: siteTitle,
   description: siteDescription,
   openGraph: {
@@ -41,7 +49,8 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
-};
+  };
+}
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -60,6 +69,7 @@ export default function RootLayout({
   return (
     <html lang="vi">
       <head>
+        {facebookAppId ? <meta property="fb:app_id" content={facebookAppId} /> : null}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* eslint-disable-next-line @next/next/no-page-custom-font */}
