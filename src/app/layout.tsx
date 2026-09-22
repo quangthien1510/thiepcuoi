@@ -18,13 +18,16 @@ export const metadata: Metadata = {
   openGraph: {
     title: siteTitle,
     description: siteDescription,
+    url: "/",
+    siteName: siteTitle,
     type: "website",
     locale: "vi_VN",
     images: [
       {
         url: "/images/CND018332.jpg",
+        type: "image/jpeg",
         width: 1200,
-        height: 430,
+        height: 630,
         alt: "Ảnh cưới Ngọc Hân và Quang Thiện",
       },
     ],
