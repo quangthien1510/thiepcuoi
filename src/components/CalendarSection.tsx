@@ -51,18 +51,20 @@ export default function CalendarSection() {
         </RevealOnScroll>
       </h2>
 
-      <div className="flex flex-col gap-4">
-        <p className="text-xl font-semibold tracking-wide text-[var(--color-ink)]">
-          Được tổ chức vào lúc
-        </p>
-        <p className="font-display text-2xl font-bold tracking-wide text-[var(--color-ink)]">
-          {weddingTime} - {weddingDayOfWeek}
-        </p>
-        <p className="font-display text-2xl font-bold tracking-wide text-[var(--color-ink)]">
-          {weddingDateDisplay}
-        </p>
-        <p className="text-sm font-semibold text-[var(--color-ink)]">{lunarDate}</p>
-      </div>
+      <RevealOnScroll direction="up" distance={30}>
+        <div className="flex flex-col gap-4">
+          <p className="text-xl font-semibold tracking-wide text-[var(--color-ink)]">
+            Được tổ chức vào lúc
+          </p>
+          <p className="font-display text-2xl font-bold tracking-wide text-[var(--color-ink)]">
+            {weddingTime} - {weddingDayOfWeek}
+          </p>
+          <p className="font-display text-2xl font-bold tracking-wide text-[var(--color-ink)]">
+            {weddingDateDisplay}
+          </p>
+          <p className="text-sm font-semibold text-[var(--color-ink)]">{lunarDate}</p>
+        </div>
+      </RevealOnScroll>
 
       <RevealOnScroll
         direction="zoom"

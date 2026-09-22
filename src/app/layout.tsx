@@ -20,9 +20,9 @@ export const metadata: Metadata = {
     locale: "vi_VN",
     images: [
       {
-        url: "/images/CND01734.webp",
+        url: "/images/CND01833.jpg",
         width: 1200,
-        height: 1600,
+        height: 630,
         alt: "Ảnh cưới Ngọc Hân và Quang Thiện",
       },
     ],
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title: "Ngọc Hân & Quang Thiện - Thiệp cưới online",
     description:
       "Thân mời bạn đến chung vui cùng Ngọc Hân & Quang Thiện trong hai ngày 17 & 18.10.2026",
-    images: ["/images/CND01734.webp"],
+    images: ["/images/CND01833.jpg"],
   },
   icons: {
     icon: "/favicon.ico",

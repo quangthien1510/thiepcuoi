@@ -47,9 +47,11 @@ export default function PeopleTimelineSection() {
           className="absolute inset-0 h-full w-full rounded-none border-0 opacity-25"
         />
         <div className="relative flex flex-col items-center gap-8 px-4 sm:px-6">
-          <h2 className="font-display text-4xl font-bold tracking-[0.15em] text-[var(--color-maroon-deep)]">
-            TIMELINE
-          </h2>
+          <RevealOnScroll direction="zoom" distance={0}>
+            <h2 className="font-display text-4xl font-bold tracking-[0.15em] text-[var(--color-maroon-deep)]">
+              TIMELINE
+            </h2>
+          </RevealOnScroll>
 
           <div className="grid w-full grid-cols-4 gap-2">
             {timeline.map((item, idx) => {
@@ -70,7 +72,9 @@ export default function PeopleTimelineSection() {
                   <p className="font-display text-sm font-bold text-[var(--color-maroon-deep)]">
                     {item.time}
                   </p>
-                  <p className="text-xs text-[var(--color-ink)]/80">{item.label}</p>
+                  <RevealOnScroll direction="up" delayMs={idx * 280 + 160} distance={18}>
+                    <p className="text-xs text-[var(--color-ink)]/80">{item.label}</p>
+                  </RevealOnScroll>
                   {idx < timeline.length - 1 && (
                     <span className="sr-only">tiếp theo</span>
                   )}
@@ -82,11 +86,11 @@ export default function PeopleTimelineSection() {
       </div>
 
       <div className="grid grid-cols-6 items-stretch gap-2 px-4 sm:px-6">
-        <div className="col-span-3 flex min-h-20 items-center justify-center px-2 py-1 text-center">
+        <RevealOnScroll direction="left" className="col-span-3 flex min-h-20 items-center justify-center px-2 py-1 text-center">
           <p className="font-script text-3xl leading-none tracking-wide text-[var(--color-maroon-deep)]">
             Mãi bên nhau
           </p>
-        </div>
+        </RevealOnScroll>
 
         <RevealOnScroll direction="right" className="col-span-3 row-span-2">
           <PhotoPlaceholder

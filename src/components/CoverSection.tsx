@@ -55,17 +55,21 @@ export default function CoverSection() {
           </RevealOnScroll>
         </h1>
 
-        <p className="font-display text-lg tracking-[0.2em] text-[var(--color-ink)]">
-          {weddingDateDisplay}
-        </p>
+        <RevealOnScroll direction="up" delayMs={250} distance={24}>
+          <p className="font-display text-lg tracking-[0.2em] text-[var(--color-ink)]">
+            {weddingDateDisplay}
+          </p>
+        </RevealOnScroll>
 
-        <p className="font-script text-xl tracking-[0.2em] text-[var(--color-rose)]">
-          {cover.tagline}
-        </p>
+        <RevealOnScroll direction="up" delayMs={350} distance={24}>
+          <p className="font-script text-xl tracking-[0.2em] text-[var(--color-rose)]">
+            {cover.tagline}
+          </p>
+        </RevealOnScroll>
 
-        <div className="w-[280px] h-[30px] ">
+        <RevealOnScroll direction="zoom" delayMs={450} distance={0} className="w-[280px] h-[30px]">
           <Countdown targetISO={weddingDateISO} />
-        </div>
+        </RevealOnScroll>
       </div>
     </section>
   );

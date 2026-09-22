@@ -40,24 +40,11 @@ export default function SaveTheDateSection() {
         </RevealOnScroll>
       </div>
 
-      <h2
-        className="text-center"
-        style={{
-          fontSize: "55.82px",
-          fontWeight: 500,
-          fontFamily: '"scarlet-bradley.regular", serif',
-          lineHeight: "normal",
-          letterSpacing: "0px",
-          textTransform: "none",
-          textDecoration: "none",
-          fontStyle: "normal",
-        }}
-      >
-        <span className="pr-40">SAVE</span>
-        <span
-          className="block py-2 text-center"
+      <RevealOnScroll direction="zoom" distance={0}>
+        <h2
+          className="text-center"
           style={{
-            fontSize: "32.76px",
+            fontSize: "55.82px",
             fontWeight: 500,
             fontFamily: '"scarlet-bradley.regular", serif',
             lineHeight: "normal",
@@ -67,10 +54,25 @@ export default function SaveTheDateSection() {
             fontStyle: "normal",
           }}
         >
-          the
-        </span>
-        <span className="pl-40">DATE</span>
-      </h2>
+          <span className="pr-40">SAVE</span>
+          <span
+            className="block py-2 text-center"
+            style={{
+              fontSize: "32.76px",
+              fontWeight: 500,
+              fontFamily: '"scarlet-bradley.regular", serif',
+              lineHeight: "normal",
+              letterSpacing: "0px",
+              textTransform: "none",
+              textDecoration: "none",
+              fontStyle: "normal",
+            }}
+          >
+            the
+          </span>
+          <span className="pl-40">DATE</span>
+        </h2>
+      </RevealOnScroll>
 
       <div className="grid w-full grid-cols-[1fr_auto_1fr] gap-4">
         <RevealOnScroll direction="left" className="flex flex-col gap-1">
@@ -105,28 +107,32 @@ export default function SaveTheDateSection() {
         </RevealOnScroll>
       </div>
 
-      <p className="max-w-[32rem] font-display text-sm italic leading-relaxed text-[var(--color-maroon)]/75">
-        {invitationNote}
-      </p>
+      <RevealOnScroll direction="up" delayMs={150} distance={24}>
+        <p className="max-w-[32rem] font-display text-sm italic leading-relaxed text-[var(--color-maroon)]/75">
+          {invitationNote}
+        </p>
+      </RevealOnScroll>
 
-      <p
-        className="text-center"
-        style={{
-          color: "rgb(0, 0, 0)",
-          textShadow: "none",
-          fontSize: "17.16px",
-          fontWeight: 500,
-          fontFamily: '"PlayfairDisplay", serif',
-          lineHeight: "normal",
-          letterSpacing: "0px",
-          textTransform: "none",
-          textDecoration: "none",
-          fontStyle: "normal",
-          wordBreak: "break-word",
-        }}
-      >
-        {invitationLine}
-      </p>
+      <RevealOnScroll direction="up" delayMs={250} distance={24}>
+        <p
+          className="text-center"
+          style={{
+            color: "rgb(0, 0, 0)",
+            textShadow: "none",
+            fontSize: "17.16px",
+            fontWeight: 500,
+            fontFamily: '"PlayfairDisplay", serif',
+            lineHeight: "normal",
+            letterSpacing: "0px",
+            textTransform: "none",
+            textDecoration: "none",
+            fontStyle: "normal",
+            wordBreak: "break-word",
+          }}
+        >
+          {invitationLine}
+        </p>
+      </RevealOnScroll>
 
       <div className="grid w-full grid-cols-6 items-stretch gap-2">
         <RevealOnScroll direction="left" className="col-span-3 row-span-2">
@@ -149,14 +155,14 @@ export default function SaveTheDateSection() {
           />
         </RevealOnScroll>
 
-        <div className="col-span-3 flex min-h-24 flex-col justify-center px-2 py-1 text-right">
+        <RevealOnScroll direction="left" className="col-span-3 flex min-h-24 flex-col justify-center px-2 py-1 text-right">
           <p className="font-script text-3xl leading-none text-[var(--color-maroon-deep)]">
             Always &amp; forever
           </p>
           <p className="mt-2 font-body text-[11px] italic leading-relaxed text-[var(--color-maroon)]/80">
             Cùng nhau viết tiếp những ngày bình yên.
           </p>
-        </div>
+        </RevealOnScroll>
 
         {photos.gallery.slice(2).map((src, index) => (
           <RevealOnScroll
