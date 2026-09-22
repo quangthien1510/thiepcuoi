@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description:
       "Thân mời bạn đến chung vui cùng Quang Thiện & Ngọc Hân trong hai ngày 17 & 18.10.2026",
     url: siteUrl,
-    siteName: "Quang Thiện & Ngọc Hân - Thiệp cưới online",
+    siteName: "Quang Thiện & Ngọc Hân - Thiệp cưới onlines",
     type: "website",
     locale: "vi_VN",
 
