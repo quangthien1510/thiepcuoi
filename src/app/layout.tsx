@@ -21,34 +21,39 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     metadataBase: siteUrl,
-  title: siteTitle,
-  description: siteDescription,
-  openGraph: {
     title: siteTitle,
     description: siteDescription,
-    url: "/",
-    siteName: siteTitle,
-    type: "website",
-    locale: "vi_VN",
-    images: [
-      {
-        url: "/images/CND018332.jpg",
-        type: "image/jpeg",
-        width: 1200,
-        height: 630,
-        alt: "Ảnh cưới Ngọc Hân và Quang Thiện",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: siteTitle,
-    description: siteDescription,
-    images: ["/images/CND018332.jpg"],
-  },
-  icons: {
-    icon: "/favicon.ico",
-  },
+    openGraph: {
+      title: siteTitle,
+      description: siteDescription,
+      url: siteUrl.toString(),
+      siteName: siteTitle,
+      type: "website",
+      locale: "vi_VN",
+      images: [
+        {
+          url: new URL(
+            "/images/CND018332.jpg",
+            siteUrl
+          ).toString(),
+          type: "image/jpeg",
+          width: 1200,
+          height: 630,
+          alt: "Ảnh cưới Ngọc Hân và Quang Thiện",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: siteTitle,
+      description: siteDescription,
+      images: [
+        new URL(
+          "/images/CND018332.jpg",
+          siteUrl
+        ).toString(),
+      ],
+    },
   };
 }
 
