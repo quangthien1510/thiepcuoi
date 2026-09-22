@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       {
         url: "/images/CND018332.jpg",
         width: 1200,
-        height: 630,
+        height: 430,
         alt: "Ảnh cưới Ngọc Hân và Quang Thiện",
       },
     ],
