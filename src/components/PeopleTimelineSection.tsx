@@ -39,14 +39,17 @@ export default function PeopleTimelineSection() {
         </RevealOnScroll>
       </div>
 
-      <div className="relative overflow-hidden py-10">
-        <PhotoPlaceholder
-          src={photos.timeline}
-          label=""
-          icon=""
-          className="absolute inset-0 h-full w-full rounded-none border-0 opacity-25"
-        />
-        <div className="relative flex flex-col items-center gap-8 px-4 sm:px-6">
+      <div className="relative isolate overflow-hidden py-10">
+        <div className="absolute inset-0 z-0 opacity-45">
+          <PhotoPlaceholder
+            src={photos.timeline}
+            label=""
+            icon=""
+            objectPosition="center 55%"
+            className="h-full w-full rounded-none border-0"
+          />
+        </div>
+        <div className="relative z-10 flex flex-col items-center gap-8 px-4 sm:px-6">
           <RevealOnScroll direction="zoom" distance={0}>
             <h2 className="font-display text-4xl font-bold tracking-[0.15em] text-[var(--color-maroon-deep)]">
               TIMELINE

@@ -19,7 +19,7 @@ export const weddingData = {
     saveTheDate2: "/images/CND01217.webp",
     groom: "/images/CND01034.webp",
     bride: "/images/CND01820.webp",
-    timeline: "/images/CND01734.webp",
+    timeline: "/images/CND01667.webp",
     // Đúng năm ảnh hiển thị trong khu vực Khoảnh khắc.
     gallery: [
       "/images/CND01833.webp",
