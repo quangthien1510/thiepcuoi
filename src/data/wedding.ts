@@ -24,7 +24,7 @@ export const weddingData = {
     gallery: [
       "/images/CND01833.webp",
       "/images/CND01131.webp",
-      "/images/CND01563.webp",
+      "/images/CND01781.webp",
       "/images/CND01185.webp",
       "/images/CND01045.webp",
     ],

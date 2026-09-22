@@ -87,9 +87,14 @@ export default function PeopleTimelineSection() {
 
       <div className="grid grid-cols-6 items-stretch gap-2 px-4 sm:px-6">
         <RevealOnScroll direction="left" className="col-span-3 flex min-h-20 items-center justify-center px-2 py-1 text-center">
-          <p className="font-script text-3xl leading-none tracking-wide text-[var(--color-maroon-deep)]">
-            Mãi bên nhau
-          </p>
+          <div className="flex flex-col items-center gap-2">
+            <p className="font-script text-3xl italic leading-none tracking-wide text-[var(--color-maroon-deep)]">
+              Mãi bên nhau
+            </p>
+            <p className="max-w-[14rem] text-[11px] italic leading-relaxed text-[var(--color-ink)]/65">
+              Cùng nhau viết tiếp câu chuyện tình yêu trọn đời
+            </p>
+          </div>
         </RevealOnScroll>
 
         <RevealOnScroll direction="right" className="col-span-3 row-span-2">

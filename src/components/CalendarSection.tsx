@@ -1,18 +1,12 @@
 import { weddingData } from "@/data/wedding";
 import RevealOnScroll from "./RevealOnScroll";
 
-const WEEKDAY_LABELS = ["1", "2", "3", "4", "5", "6", "7"];
-
 function buildMonthGrid(dateISO: string) {
   const date = new Date(dateISO);
   const year = date.getFullYear();
   const month = date.getMonth();
   const daysInMonth = new Date(year, month + 1, 0).getDate();
-  // Monday-first index: 0 = Monday ... 6 = Sunday
-  const firstWeekday = (new Date(year, month, 1).getDay() + 6) % 7;
-
   const cells: (number | null)[] = [
-    ...Array(firstWeekday).fill(null),
     ...Array.from({ length: daysInMonth }, (_, i) => i + 1),
   ];
   while (cells.length % 7 !== 0) cells.push(null);
@@ -68,35 +62,29 @@ export default function CalendarSection() {
 
       <RevealOnScroll
         direction="zoom"
-        className="relative w-full max-w-xs rounded-lg border border-[var(--color-gold)]/30 bg-[var(--color-cream)] p-4 pt-8 shadow-sm"
+        className="relative w-full max-w-[380px] pt-5"
       >
-        <span className="absolute -top-3 left-1/2 -translate-x-1/2 text-2xl">
-          📎
-        </span>
-        <div className="grid grid-cols-7 gap-y-3 text-xs">
-          {WEEKDAY_LABELS.map((label) => (
-            <span key={label} className="font-semibold text-[var(--color-ink)]">
-              {label}
-            </span>
-          ))}
+        <span className="calendar-paperclip" aria-hidden="true" />
+        <div className="calendar-paper">
+          <div className="calendar-holes" aria-hidden="true">
+            {Array.from({ length: 12 }, (_, index) => (
+              <span key={index} />
+            ))}
+          </div>
+          <div className="grid grid-cols-7 gap-y-5 px-7 pb-7 pt-12 text-[13px] sm:gap-y-6 sm:px-9 sm:pb-8 sm:text-sm">
           {weeks.flat().map((day, idx) => (
             <span
               key={idx}
-              className="relative flex h-6 items-center justify-center font-semibold text-[var(--color-ink)]"
+              className="relative flex h-7 items-center justify-center font-normal text-[var(--color-ink)]"
             >
               {day && highlightDays.includes(day) ? (
-                <span className="relative flex h-6 w-6 items-center justify-center">
+                <span className="relative flex h-9 w-9 items-center justify-center">
                   <span
-                    className={`absolute text-xl ${
-                      day === 17
-                        ? "calendar-heart-from-left"
-                        : "calendar-heart-from-right"
-                    }`}
-                    style={{ animationDelay: day === 17 ? "350ms" : "650ms" }}
+                    className="calendar-heart"
                   >
                     ❤️
                   </span>
-                  <span className="relative text-[11px] font-bold text-white">
+                  <span className="relative text-xs font-medium text-white">
                     {day}
                   </span>
                 </span>
@@ -105,6 +93,7 @@ export default function CalendarSection() {
               )}
             </span>
           ))}
+          </div>
         </div>
       </RevealOnScroll>
     </section>
