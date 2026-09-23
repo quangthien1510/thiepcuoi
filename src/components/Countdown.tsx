@@ -47,7 +47,7 @@ export default function Countdown({ targetISO }: Props) {
   const display = timeLeft ?? { days: 0, hours: 0, minutes: 0, seconds: 0 };
 
   return (
-    <div className="grid grid-cols-4 gap-5 font-[Arial]">
+    <div className="grid grid-cols-4 gap-5 font-body">
       {UNITS.map((unit) => (
         <div
           key={unit.key}

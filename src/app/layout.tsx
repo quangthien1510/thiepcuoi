@@ -1,39 +1,81 @@
 import type { Metadata, Viewport } from "next";
+import {
+  Be_Vietnam_Pro,
+  Great_Vibes,
+  Playfair_Display,
+} from "next/font/google";
+
 import "./globals.css";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
-  ? new URL(process.env.NEXT_PUBLIC_SITE_URL)
-  : process.env.VERCEL_URL
-    ? new URL(`https://${process.env.VERCEL_URL}`)
-    : new URL("http://localhost:3000");
+import {
+  SITE_URL,
+  PREVIEW_IMAGE,
+  SITE_TITLE,
+  SITE_DESCRIPTION,
+  SITE_NAME,
+  PREVIEW_IMAGE_ALT,
+} from "@/lib/site-metadata";
+
+const bodyFont = Be_Vietnam_Pro({
+  subsets: ["latin", "vietnamese"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-be-vietnam-pro",
+  display: "swap",
+});
+
+const displayFont = Playfair_Display({
+  subsets: ["latin", "vietnamese"],
+  weight: ["500", "600", "700", "900"],
+  style: ["normal", "italic"],
+  variable: "--font-playfair-display",
+  display: "swap",
+});
+
+const scriptFont = Great_Vibes({
+  subsets: ["latin", "vietnamese"],
+  weight: "400",
+  variable: "--font-great-vibes",
+  display: "swap",
+});
+
+const siteUrl = new URL(SITE_URL);
 
 export const metadata: Metadata = {
   metadataBase: siteUrl,
-  title: "Ngọc Hân & Quang Thiện - Thiệp cưới online",
-  description:
-    "Thân mời bạn đến chung vui cùng Ngọc Hân & Quang Thiện trong hai ngày 17 & 18.10.2026",
+
+  title: SITE_TITLE,
+
+  description: SITE_DESCRIPTION,
+
   openGraph: {
-    title: "Ngọc Hân & Quang Thiện - Thiệp cưới online",
-    description:
-      "Thân mời bạn đến chung vui cùng Ngọc Hân & Quang Thiện trong hai ngày 17 & 18.10.2026",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+
+    url: SITE_URL,
+
+    siteName: SITE_NAME,
+
     type: "website",
     locale: "vi_VN",
+
     images: [
       {
-        url: "/images/CND01833.jpg",
+        url: PREVIEW_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Ảnh cưới Ngọc Hân và Quang Thiện",
+        type: "image/png",
+        alt: PREVIEW_IMAGE_ALT,
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Ngọc Hân & Quang Thiện - Thiệp cưới online",
-    description:
-      "Thân mời bạn đến chung vui cùng Ngọc Hân & Quang Thiện trong hai ngày 17 & 18.10.2026",
-    images: ["/images/CND01833.jpg"],
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    images: [PREVIEW_IMAGE],
   },
+
   icons: {
     icon: "/favicon.ico",
   },
@@ -54,18 +96,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="vi">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,900;1,600&family=Great+Vibes&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className="antialiased">{children}</body>
+    <html lang="vi" className={`${bodyFont.variable} ${displayFont.variable} ${scriptFont.variable}`}>
+
+      <body className="antialiased">
+        {children}
+      </body>
     </html>
   );
 }
-

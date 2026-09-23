@@ -9,7 +9,6 @@ export default function CoverSection() {
     textShadow: "none",
     fontSize: "30.96px",
     fontWeight: 500,
-    fontFamily: '"scarlet-bradley.regular", serif',
     textAlign: "center" as const,
     lineHeight: 1.43,
     letterSpacing: "0px",

@@ -6,7 +6,7 @@ export const weddingData = {
   // Nhạc sẽ bắt đầu sau lần chạm/click đầu tiên của khách (do chính sách mobile).
   music: {
     enabled: true,
-    src: "/music/LỄ ĐƯỜNG của Hải Long & Salim  KAI ĐINH  Official MV - Kai Dinh Official (youtube).opus",
+    src: "/music/Xứng Đôi Cưới Thôi - Lê Thiện Hiếu (Bài Hát Cực Cute Nhất 2019) - MARTSEN (youtube).opus",
     volume: 0.45,
   },
   // Chỉ cần thêm ảnh vào public/images/ rồi khai báo đường dẫn tại đây.
@@ -17,8 +17,8 @@ export const weddingData = {
     cover: "/images/CND01734.webp",
     saveTheDate1: "/images/CND01230.webp",
     saveTheDate2: "/images/CND01217.webp",
-    groom: "/images/CND01034.webp",
     bride: "/images/CND01820.webp",
+    groom: "/images/CND01034.webp",
     timeline: "/images/CND01667.webp",
     // Đúng năm ảnh hiển thị trong khu vực Khoảnh khắc.
     gallery: [
@@ -41,12 +41,12 @@ export const weddingData = {
     avatar: "/images/CND01833.webp",
   },
   couple: {
-    groomName: "Quang Thiện",
     brideName: "Ngọc Hân",
-    groomFullName: "Nguyễn Quang Thiện",
+    groomName: "Quang Thiện",
     brideFullName: "Nguyễn Ngọc Hân",
-    groomBirth: "15/10/2004",
+    groomFullName: "Nguyễn Quang Thiện",
     brideBirth: "3/1/2006",
+    groomBirth: "15/10/2004",
     hashtag: "#QuangThienNgocHan",
   },
 
@@ -133,7 +133,6 @@ export const weddingData = {
         name: "Nguyễn Ngọc Hân",
         bank: "MB Bank",
         accountNumber: "1234567890",
-        // Ảnh QR chuyển khoản: đặt file ảnh vào public/images/ rồi sửa đường dẫn tại đây.
         qrImage: "",
       },
       {
@@ -141,6 +140,7 @@ export const weddingData = {
         name: "Nguyễn Quang Thiện",
         bank: "MB Bank",
         accountNumber: "0969152065",
+        // Ảnh QR chuyển khoản: đặt file ảnh vào public/images/ rồi sửa đường dẫn tại đây.
         qrImage: "",
       },
     ],

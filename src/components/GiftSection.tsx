@@ -38,9 +38,8 @@ export default function GiftSection() {
         >
           <span className="animate-ring-pulse absolute inset-0 rounded-full bg-[var(--color-pink)]/40" />
           <span
-            className={`relative block h-24 w-24 ${
-              boxLeaving ? "animate-box-open" : shaking ? "animate-box-shake" : "animate-gentle-bob"
-            }`}
+            className={`relative block h-24 w-24 ${boxLeaving ? "animate-box-open" : shaking ? "animate-box-shake" : "animate-gentle-bob"
+              }`}
           >
             <GiftBoxIcon className="h-full w-full drop-shadow-md" />
           </span>
@@ -61,11 +60,10 @@ export default function GiftSection() {
                 key={acc.owner}
                 type="button"
                 onClick={() => setActiveIdx(idx)}
-                className={`rounded-full px-4 py-1.5 text-sm font-medium transition ${
-                  idx === activeIdx
+                className={`rounded-full px-4 py-1.5 text-sm font-medium transition ${idx === activeIdx
                     ? "bg-[var(--color-maroon)] text-white"
                     : "bg-[var(--color-cream-deep)] text-[var(--color-maroon)]"
-                }`}
+                  }`}
               >
                 {acc.owner}
               </button>

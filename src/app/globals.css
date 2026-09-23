@@ -24,9 +24,10 @@
   --color-ink: var(--color-ink);
   --color-gold: var(--color-gold);
   --color-paper: var(--color-paper);
-  --font-display: "Playfair Display", ui-serif, Georgia, serif;
-  --font-script: "Great Vibes", cursive;
-  --font-body: "Be Vietnam Pro", ui-sans-serif, system-ui, sans-serif;
+
+  --font-display: var(--font-playfair-display);
+  --font-script: var(--font-great-vibes);
+  --font-body: var(--font-be-vietnam-pro);
 }
 
 * {
@@ -49,7 +50,7 @@ body {
     color-mix(in srgb, var(--color-cream-deep) 44%, white)
   );
   color: var(--color-ink);
-  font-family: var(--font-body), sans-serif;
+  font-family: var(--font-be-vietnam-pro), sans-serif;
   -webkit-tap-highlight-color: transparent;
 }
 

@@ -9,7 +9,6 @@ export default function SaveTheDateSection() {
     textShadow: "none",
     fontSize: "16.38px",
     fontWeight: 500,
-    fontFamily: '"scarlet-bradley.regular", serif',
     textAlign: "center" as const,
     lineHeight: "normal",
     letterSpacing: "0px",
@@ -42,16 +41,12 @@ export default function SaveTheDateSection() {
 
       <RevealOnScroll direction="zoom" distance={0}>
         <h2
-          className="text-center"
+          className="font-display text-center"
           style={{
             fontSize: "55.82px",
             fontWeight: 500,
-            fontFamily: '"scarlet-bradley.regular", serif',
             lineHeight: "normal",
             letterSpacing: "0px",
-            textTransform: "none",
-            textDecoration: "none",
-            fontStyle: "normal",
           }}
         >
           <span className="pr-40">SAVE</span>
@@ -60,7 +55,6 @@ export default function SaveTheDateSection() {
             style={{
               fontSize: "32.76px",
               fontWeight: 500,
-              fontFamily: '"scarlet-bradley.regular", serif',
               lineHeight: "normal",
               letterSpacing: "0px",
               textTransform: "none",
@@ -79,7 +73,7 @@ export default function SaveTheDateSection() {
           <h3 className="font-display text-lg font-semibold text-[var(--color-maroon)]">
             {families.bride.title}
           </h3>
-          <p style={familyInfoStyle}>
+          <p className="font-body" style={familyInfoStyle}>
             {families.bride.father}
             <br />
             {families.bride.mother}
@@ -97,7 +91,7 @@ export default function SaveTheDateSection() {
           <h3 className="font-display text-lg font-semibold text-[var(--color-maroon)]">
             {families.groom.title}
           </h3>
-          <p style={familyInfoStyle}>
+          <p className="font-body" style={familyInfoStyle}>
             {families.groom.father}
             <br />
             {families.groom.mother}
@@ -115,18 +109,14 @@ export default function SaveTheDateSection() {
 
       <RevealOnScroll direction="up" delayMs={250} distance={24}>
         <p
-          className="text-center"
+          className="font-display text-center"
           style={{
             color: "rgb(0, 0, 0)",
             textShadow: "none",
             fontSize: "17.16px",
             fontWeight: 500,
-            fontFamily: '"PlayfairDisplay", serif',
             lineHeight: "normal",
             letterSpacing: "0px",
-            textTransform: "none",
-            textDecoration: "none",
-            fontStyle: "normal",
             wordBreak: "break-word",
           }}
         >

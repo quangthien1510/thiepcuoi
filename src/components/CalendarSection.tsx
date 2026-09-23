@@ -72,27 +72,27 @@ export default function CalendarSection() {
             ))}
           </div>
           <div className="grid grid-cols-7 gap-y-5 px-7 pb-7 pt-12 text-[13px] sm:gap-y-6 sm:px-9 sm:pb-8 sm:text-sm">
-          {weeks.flat().map((day, idx) => (
-            <span
-              key={idx}
-              className="relative flex h-7 items-center justify-center font-normal text-[var(--color-ink)]"
-            >
-              {day && highlightDays.includes(day) ? (
-                <span className="relative flex h-9 w-9 items-center justify-center">
-                  <span
-                    className="calendar-heart"
-                  >
-                    ❤️
+            {weeks.flat().map((day, idx) => (
+              <span
+                key={idx}
+                className="relative flex h-7 items-center justify-center font-normal text-[var(--color-ink)]"
+              >
+                {day && highlightDays.includes(day) ? (
+                  <span className="relative flex h-9 w-9 items-center justify-center">
+                    <span
+                      className="calendar-heart"
+                    >
+                      ❤️
+                    </span>
+                    <span className="relative text-xs font-medium text-white">
+                      {day}
+                    </span>
                   </span>
-                  <span className="relative text-xs font-medium text-white">
-                    {day}
-                  </span>
-                </span>
-              ) : (
-                day
-              )}
-            </span>
-          ))}
+                ) : (
+                  day
+                )}
+              </span>
+            ))}
           </div>
         </div>
       </RevealOnScroll>
