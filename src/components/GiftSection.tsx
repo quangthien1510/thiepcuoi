@@ -38,9 +38,8 @@ export default function GiftSection() {
         >
           <span className="animate-ring-pulse absolute inset-0 rounded-full bg-[var(--color-pink)]/40" />
           <span
-            className={`relative block h-24 w-24 ${
-              boxLeaving ? "animate-box-open" : shaking ? "animate-box-shake" : "animate-gentle-bob"
-            }`}
+            className={`relative block h-24 w-24 ${boxLeaving ? "animate-box-open" : shaking ? "animate-box-shake" : "animate-gentle-bob"
+              }`}
           >
             <GiftBoxIcon className="h-full w-full drop-shadow-md" />
           </span>
@@ -61,11 +60,10 @@ export default function GiftSection() {
                 key={acc.owner}
                 type="button"
                 onClick={() => setActiveIdx(idx)}
-                className={`rounded-full px-4 py-1.5 text-sm font-medium transition ${
-                  idx === activeIdx
-                    ? "bg-[var(--color-maroon)] text-white"
-                    : "bg-[var(--color-cream-deep)] text-[var(--color-maroon)]"
-                }`}
+                className={`rounded-full px-4 py-1.5 text-sm font-medium transition ${idx === activeIdx
+                  ? "bg-[var(--color-maroon)] text-white"
+                  : "bg-[var(--color-cream-deep)] text-[var(--color-maroon)]"
+                  }`}
               >
                 {acc.owner}
               </button>
@@ -77,8 +75,18 @@ export default function GiftSection() {
               src={active.qrImage}
               label={`QR chuyển khoản - ${active.owner}`}
               icon="🔳"
-              className="h-56 w-56 rounded-2xl border-2 border-[var(--color-gold)]/50 bg-white shadow-md"
+              fit="contain"
+              className="h-[min(80vw,210px)] w-[min(85vw,360px)] rounded-2xl border-2 border-[var(--color-gold)]/50 bg-white  shadow-md"
             />
+            {active.qrImage && (
+              <a
+                href={active.qrImage}
+                download
+                className="rounded-full bg-[var(--color-maroon)] px-5 py-2 text-sm font-medium text-white transition hover:bg-[var(--color-maroon-deep)]"
+              >
+                Lưu ảnh QR
+              </a>
+            )}
             <div className="flex flex-col items-center gap-1">
               <p className="font-script text-2xl text-[var(--color-rose)]">{active.owner}</p>
               <p className="font-display text-lg font-semibold text-[var(--color-maroon-deep)]">

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { weddingData } from "@/data/wedding";
 import PhotoPlaceholder from "./PhotoPlaceholder";
@@ -9,11 +10,8 @@ export default function LocationSection() {
   const { venues, people, photos } = weddingData;
   const [selectedVenue, setSelectedVenue] = useState<"bride" | "groom">("bride");
   const venue = venues[selectedVenue];
-  const mapSrc = venue.mapQuery
-    ? `https://www.google.com/maps?q=${encodeURIComponent(
-      venue.mapQuery
-    )}&z=16&output=embed`
-    : "";
+  const venueAddress =
+    "address" in venue && typeof venue.address === "string" ? venue.address : "";
   const mapUrl = venue.mapUrl || (venue.mapQuery
     ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
       venue.mapQuery
@@ -50,37 +48,46 @@ export default function LocationSection() {
             {venue.label}
           </p>
           <p className="font-body text-base text-[var(--color-ink)]/90">{venue.name}</p>
-          <a
-            href={mapUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-body text-sm font-semibold leading-relaxed text-[var(--color-maroon-deep)] underline decoration-[var(--color-gold)] underline-offset-4"
-          >
-            {venue.address}
-          </a>
+          {venueAddress && (
+            <a
+              href={mapUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-body text-sm font-semibold leading-relaxed text-[var(--color-maroon-deep)] underline decoration-[var(--color-gold)] underline-offset-4"
+            >
+              {venueAddress}
+            </a>
+          )}
         </div>
 
-        {mapSrc ? (
+        {mapUrl ? (
           <RevealOnScroll
             key={selectedVenue}
             direction="zoom"
             className="relative h-56 w-full overflow-hidden rounded-xl border border-[var(--color-gold)]/30 shadow-sm"
           >
-            <iframe
-              title={`Bản đồ ${venue.label}`}
-              src={mapSrc}
-              className="h-full w-full select-none"
-              scrolling="no"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
             <a
               href={mapUrl}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Mở địa điểm ${venue.label} trên Google Maps`}
-              className="absolute inset-0 z-10"
-            />
+              className="absolute inset-0 flex items-center justify-center"
+            >
+              {venue.mapImage ? (
+                <Image
+                  src={venue.mapImage}
+                  alt={`Sơ đồ ${venue.label}`}
+                  fill
+                  sizes="(max-width: 640px) 100vw, 640px"
+                  quality={75}
+                  className="object-cover"
+                />
+              ) : (
+                <span className="font-body text-sm font-semibold text-[var(--color-maroon-deep)] underline decoration-[var(--color-gold)] underline-offset-4">
+                  Xem vị trí trên Google Maps
+                </span>
+              )}
+            </a>
           </RevealOnScroll>
         ) : (
           <div className="flex h-32 items-center justify-center rounded-xl border border-dashed border-[var(--color-gold)]/50 bg-[var(--color-cream-deep)]/30 px-4 text-center font-body text-sm text-[var(--color-ink)]/60">

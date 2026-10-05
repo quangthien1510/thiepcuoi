@@ -48,7 +48,7 @@ export const weddingData = {
     brideFullName: "Nguyễn Ngọc Hân",
     groomBirth: "15/10/2004",
     brideBirth: "3/1/2006",
-    hashtag: "#QuangThienNgocHan",
+    hashtag: "#NgocHanQuangThien",
   },
 
   cover: {
@@ -60,26 +60,25 @@ export const weddingData = {
   weddingDateISO: "2026-10-17T10:30:00+07:00",
   weddingDateDisplay: "17 & 18.10.2026",
   weddingDayOfWeek: "THỨ BẢY & CHỦ NHẬT",
-  weddingTime: "10:30",
-  lunarDate: "Nhằm ngày 8 tháng 9 năm Ất Tỵ",
+  lunarDate: "Tức ngày 8 và 9 tháng 9 năm Bính Ngọ",
   highlightDays: [17, 18],
 
   families: {
     bride: {
       title: "Nhà gái",
-      father: "Ông. Nguyễn Công Hanh",
-      mother: "Bà. Nguyễn Thị Ngân",
-      address: "TP. Hà Nội",
+      father: "Ông Nguyễn Công Hanh",
+      mother: "Bà Nguyễn Thị Ngân",
+      address: "Xuân Dương - Đa Phúc - Hà Nội",
     },
     groom: {
       title: "Nhà trai",
-      father: "Ông. Nguyễn Quang Hậu",
-      mother: "Bà. Nguyễn Thị Lan",
-      address: "TP. Hà Nội",
+      father: "Ông Nguyễn Quang Hậu",
+      mother: "Bà Nguyễn Thị Lan",
+      address: "Xuân Dương - Đa Phúc - Hà Nội",
     },
   },
 
-  invitationLine: "Thân mời đến dự lễ thành hôn của chúng mình",
+  invitationLine: "Trân trọng kính mời bạn đến dự lễ thành hôn của chúng mình.",
   invitationNote:
     "Hai ngày chung vui, hai dấu mốc yêu thương và một hành trình trọn đời bên nhau.",
 
@@ -87,16 +86,19 @@ export const weddingData = {
     bride: {
       label: "Địa điểm nhà gái",
       name: "Tại tư gia nhà gái",
-      address: "Số Nhà 15 Đường Mương Chính",
-      mapUrl: "",
-      mapQuery: "Số Nhà 15 Đường Mương Chính, Đa Phúc, Ha Noi",
+      // Thêm ảnh sơ đồ nhẹ vào public/images/ rồi điền đường dẫn tại đây.
+      mapImage: "/images/nhagai.webp",
+      // address: "https://maps.app.goo.gl/aHUrv8d42rwUUUmS6?g_st=ifm",
+      mapUrl: "https://maps.app.goo.gl/aHUrv8d42rwUUUmS6?g_st=ifm",
+      mapQuery: "21.2062819,105.8814012",
     },
     groom: {
       label: "Địa điểm nhà trai",
       name: "Tại tư gia nhà trai",
-      address: "Số Nhà 19 Đường Mương Chính",
-      mapUrl: "",
-      mapQuery: "Số Nhà 19 Đường Mương Chính, Đa Phúc, Ha Noi",
+      mapImage: "/images/nhatrai.webp",
+      // address: "21.2094410, 105.8837060",
+      mapUrl: "https://maps.app.goo.gl/VZaq5jJN8WPr7pHu8?g_st=ic",
+      mapQuery: "21.2094410,105.8837060",
     },
   },
 
@@ -114,10 +116,10 @@ export const weddingData = {
   },
 
   timeline: [
-    { time: "05:30", label: "Bước dâu", icon: "car" },
-    { time: "10:30", label: "Đón khách", icon: "flower" },
+    { time: "10:30", label: "Rước dâu", icon: "car" },
+    { time: "11:30", label: "Đón khách", icon: "flower" },
     { time: "12:00", label: "Lễ thành hôn", icon: "ring" },
-    { time: "13:00", label: "Lưu niệm", icon: "heart-hands" },
+    { time: "12:30", label: "Chụp ảnh lưu niệm", icon: "heart-hands" },
   ],
 
   rsvp: {
@@ -133,18 +135,18 @@ export const weddingData = {
     accounts: [
       {
         owner: "Cô dâu",
-        name: "Nguyễn Ngọc Hân",
+        name: "NGUYEN NGOC HAN",
         bank: "MB Bank",
-        accountNumber: "1234567890",
+        accountNumber: "585858585631",
         // Ảnh QR chuyển khoản: đặt file ảnh vào public/images/ rồi sửa đường dẫn tại đây.
-        qrImage: "",
+        qrImage: "/images/QRcaodau-removebg-preview.webp",
       },
       {
         owner: "Chú rể",
-        name: "Nguyễn Quang Thiện",
+        name: "NGUYEN QUANG THIEN",
         bank: "MB Bank",
         accountNumber: "0969152065",
-        qrImage: "",
+        qrImage: "/images/QRchude.webp",
       },
     ],
   },

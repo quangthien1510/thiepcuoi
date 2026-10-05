@@ -7,15 +7,19 @@ import RSVPSection from "@/components/RSVPSection";
 import GiftSection from "@/components/GiftSection";
 import FloatingWidgets from "@/components/FloatingWidgets";
 import ScrollToTop from "@/components/ScrollToTop";
+import AutoScroll from "@/components/AutoScroll";
 import MusicPlayer from "@/components/MusicPlayer";
 import OpeningCurtain from "@/components/OpeningCurtain";
+import FallingLeaves from "@/components/FallingLeaves";
 
 export default function WeddingPageContent() {
     return (
         <>
             <OpeningCurtain />
             <ScrollToTop />
+            <AutoScroll />
             <MusicPlayer />
+            <FallingLeaves />
             <main className="wedding-container relative mx-auto min-h-screen w-full max-w-[800px] overflow-x-hidden bg-[var(--color-background)] pb-16">
                 <CoverSection />
                 <SaveTheDateSection />

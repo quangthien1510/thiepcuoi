@@ -24,7 +24,6 @@ export default function CalendarSection() {
     weddingDateISO,
     weddingDateDisplay,
     weddingDayOfWeek,
-    weddingTime,
     lunarDate,
     highlightDays,
   } = weddingData;
@@ -48,10 +47,10 @@ export default function CalendarSection() {
       <RevealOnScroll direction="up" distance={30}>
         <div className="flex flex-col gap-4">
           <p className="text-xl font-semibold tracking-wide text-[var(--color-ink)]">
-            Được tổ chức vào lúc
+            Được tổ chức vào
           </p>
           <p className="font-display text-2xl font-bold tracking-wide text-[var(--color-ink)]">
-            {weddingTime} - {weddingDayOfWeek}
+            {weddingDayOfWeek}
           </p>
           <p className="font-display text-2xl font-bold tracking-wide text-[var(--color-ink)]">
             {weddingDateDisplay}
@@ -72,27 +71,27 @@ export default function CalendarSection() {
             ))}
           </div>
           <div className="grid grid-cols-7 gap-y-5 px-7 pb-7 pt-12 text-[13px] sm:gap-y-6 sm:px-9 sm:pb-8 sm:text-sm">
-          {weeks.flat().map((day, idx) => (
-            <span
-              key={idx}
-              className="relative flex h-7 items-center justify-center font-normal text-[var(--color-ink)]"
-            >
-              {day && highlightDays.includes(day) ? (
-                <span className="relative flex h-9 w-9 items-center justify-center">
-                  <span
-                    className="calendar-heart"
-                  >
-                    ❤️
+            {weeks.flat().map((day, idx) => (
+              <span
+                key={idx}
+                className="relative flex h-7 items-center justify-center font-normal text-[var(--color-ink)]"
+              >
+                {day && highlightDays.includes(day) ? (
+                  <span className="relative flex h-9 w-9 items-center justify-center">
+                    <span
+                      className="calendar-heart"
+                    >
+                      ❤️
+                    </span>
+                    <span className="relative text-xs font-medium text-white">
+                      {day}
+                    </span>
                   </span>
-                  <span className="relative text-xs font-medium text-white">
-                    {day}
-                  </span>
-                </span>
-              ) : (
-                day
-              )}
-            </span>
-          ))}
+                ) : (
+                  day
+                )}
+              </span>
+            ))}
           </div>
         </div>
       </RevealOnScroll>
