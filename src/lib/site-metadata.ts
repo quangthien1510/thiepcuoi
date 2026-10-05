@@ -1,6 +1,6 @@
 const rawSiteUrl =
     process.env.NEXT_PUBLIC_SITE_URL ||
-    "https://wedding-thienhan.vercel.app";
+    "https://thiepcuoi-phi.vercel.app";
 
 export const SITE_URL = rawSiteUrl.replace(/\/$/, "");
 

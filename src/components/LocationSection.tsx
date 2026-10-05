@@ -14,11 +14,11 @@ export default function LocationSection() {
       venue.mapQuery
     )}&z=16&output=embed`
     : "";
-  const mapLink = venue.mapQuery
+  const mapUrl = venue.mapUrl || (venue.mapQuery
     ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
       venue.mapQuery
     )}`
-    : "";
+    : "");
 
   return (
     <section className="section-frame flex flex-col gap-6 px-6 pt-14 pb-14">
@@ -50,43 +50,38 @@ export default function LocationSection() {
             {venue.label}
           </p>
           <p className="font-body text-base text-[var(--color-ink)]/90">{venue.name}</p>
-          <p className="font-body text-sm font-semibold leading-relaxed text-[var(--color-maroon-deep)]">
+          <a
+            href={mapUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-body text-sm font-semibold leading-relaxed text-[var(--color-maroon-deep)] underline decoration-[var(--color-gold)] underline-offset-4"
+          >
             {venue.address}
-          </p>
+          </a>
         </div>
 
         {mapSrc ? (
-          <>
+          <RevealOnScroll
+            key={selectedVenue}
+            direction="zoom"
+            className="relative h-56 w-full overflow-hidden rounded-xl border border-[var(--color-gold)]/30 shadow-sm"
+          >
+            <iframe
+              title={`Bản đồ ${venue.label}`}
+              src={mapSrc}
+              className="h-full w-full select-none"
+              scrolling="no"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
             <a
-              href={mapLink}
+              href={mapUrl}
               target="_blank"
-              rel="noreferrer"
-              aria-label={`Mở ${venue.label} trên Google Maps`}
-            >
-              <RevealOnScroll
-                key={selectedVenue}
-                direction="zoom"
-                className="h-56 w-full overflow-hidden rounded-xl border border-[var(--color-gold)]/30 shadow-sm"
-              >
-                <iframe
-                  title={`Bản đồ ${venue.label}`}
-                  src={mapSrc}
-                  className="pointer-events-none h-full w-full select-none"
-                  scrolling="no"
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
-              </RevealOnScroll>
-            </a>
-            <a
-              href={mapLink}
-              target="_blank"
-              rel="noreferrer"
-              className="self-center font-display text-sm font-semibold text-[var(--color-maroon-deep)] underline underline-offset-4"
-            >
-              Mở Google Maps
-            </a>
-          </>
+              rel="noopener noreferrer"
+              aria-label={`Mở địa điểm ${venue.label} trên Google Maps`}
+              className="absolute inset-0 z-10"
+            />
+          </RevealOnScroll>
         ) : (
           <div className="flex h-32 items-center justify-center rounded-xl border border-dashed border-[var(--color-gold)]/50 bg-[var(--color-cream-deep)]/30 px-4 text-center font-body text-sm text-[var(--color-ink)]/60">
             Chưa có địa chỉ Google Maps cho địa điểm này.
@@ -97,20 +92,20 @@ export default function LocationSection() {
       <div className="flex items-center gap-4">
         <RevealOnScroll direction="left" className="w-[58%]">
           <PhotoPlaceholder
-            src={photos[selectedVenue]}
-            label={selectedVenue === "bride" ? "Ảnh cô dâu" : "Ảnh chú rể"}
-            icon={selectedVenue === "bride" ? "👰" : "🤵"}
+            src={photos.groom}
+            label="Ảnh chú rể"
+            icon="🤵"
             className="aspect-[2.5/4] w-full rounded-xl"
           />
         </RevealOnScroll>
         <RevealOnScroll direction="right" delayMs={100} className="flex flex-1 flex-col items-center gap-1 text-center">
           <p className="font-script text-2xl text-[var(--color-rose)]">
-            {people[selectedVenue].role}
+            {people.groom.role}
           </p>
           <p className="font-display text-xl font-semibold text-[var(--color-maroon-deep)]">
-            {people[selectedVenue].name}
+            {people.groom.name}
           </p>
-          <p className="font-body text-sm text-[var(--color-ink)]/60">{people[selectedVenue].birth}</p>
+          <p className="font-body text-sm text-[var(--color-ink)]/60">{people.groom.birth}</p>
         </RevealOnScroll>
       </div>
 

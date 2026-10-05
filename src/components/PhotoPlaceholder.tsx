@@ -12,6 +12,7 @@ type PhotoPlaceholderProps = {
   fit?: "cover" | "contain";
   objectPosition?: string;
   plain?: boolean;
+  preload?: boolean;
 };
 
 export default function PhotoPlaceholder({
@@ -22,6 +23,7 @@ export default function PhotoPlaceholder({
   fit = "cover",
   objectPosition = "center",
   plain = false,
+  preload = false,
 }: PhotoPlaceholderProps) {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
@@ -55,6 +57,7 @@ export default function PhotoPlaceholder({
             src={src}
             alt={label || "Ảnh cưới"}
             fill
+            preload={preload}
             sizes="(max-width: 640px) 100vw, 800px"
             quality={82}
             className={`${fit === "contain" ? "object-contain" : "object-cover"} rounded-2xl`}

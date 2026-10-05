@@ -6,7 +6,7 @@ export const weddingData = {
   // Nhạc sẽ bắt đầu sau lần chạm/click đầu tiên của khách (do chính sách mobile).
   music: {
     enabled: true,
-    src: "/music/Xứng Đôi Cưới Thôi - Lê Thiện Hiếu (Bài Hát Cực Cute Nhất 2019) - MARTSEN (youtube).opus",
+    src: "/music/LỄ ĐƯỜNG của Hải Long & Salim  KAI ĐINH  Official MV - Kai Dinh Official (youtube).opus",
     volume: 0.45,
   },
   // Chỉ cần thêm ảnh vào public/images/ rồi khai báo đường dẫn tại đây.
@@ -17,36 +17,37 @@ export const weddingData = {
     cover: "/images/CND01734.webp",
     saveTheDate1: "/images/CND01230.webp",
     saveTheDate2: "/images/CND01217.webp",
-    bride: "/images/CND01820.webp",
     groom: "/images/CND01034.webp",
+    bride: "/images/CND01820.webp",
     timeline: "/images/CND01667.webp",
     // Đúng năm ảnh hiển thị trong khu vực Khoảnh khắc.
     gallery: [
+      "/images/CND01927.webp",
+      "/images/CND02056.webp",
+      "/images/CND02090_2.webp",
+      "/images/CND02041.webp",
+      "/images/CND02108.webp",
+    ],
+    // Đúng năm ảnh hiển thị trong khu vực sau timeline.
+    extraPhotos: [
       "/images/CND01833.webp",
       "/images/CND01131.webp",
       "/images/CND01781.webp",
       "/images/CND01185.webp",
       "/images/CND01045.webp",
-    ],
-    // Đúng năm ảnh hiển thị trong khu vực sau timeline.
-    extraPhotos: [
-      "/images/CND02056.webp",
-      "/images/CND02041.webp",
-      "/images/CND02090_2.webp",
-      "/images/CND01927.webp",
-      "/images/CND02108.webp",
+      "/images/CND01045.webp"
     ],
     // Ảnh đại diện hiển thị trên nút mở/đóng khung lời chúc (góc dưới màn hình).
     // Nên dùng ảnh vuông, cận mặt (giống avatar chat) để hiện rõ khi thu nhỏ.
     avatar: "/images/CND01833.webp",
   },
   couple: {
-    brideName: "Ngọc Hân",
     groomName: "Quang Thiện",
-    brideFullName: "Nguyễn Ngọc Hân",
+    brideName: "Ngọc Hân",
     groomFullName: "Nguyễn Quang Thiện",
-    brideBirth: "3/1/2006",
+    brideFullName: "Nguyễn Ngọc Hân",
     groomBirth: "15/10/2004",
+    brideBirth: "3/1/2006",
     hashtag: "#QuangThienNgocHan",
   },
 
@@ -87,12 +88,14 @@ export const weddingData = {
       label: "Địa điểm nhà gái",
       name: "Tại tư gia nhà gái",
       address: "Số Nhà 15 Đường Mương Chính",
+      mapUrl: "",
       mapQuery: "Số Nhà 15 Đường Mương Chính, Đa Phúc, Ha Noi",
     },
     groom: {
       label: "Địa điểm nhà trai",
       name: "Tại tư gia nhà trai",
       address: "Số Nhà 19 Đường Mương Chính",
+      mapUrl: "",
       mapQuery: "Số Nhà 19 Đường Mương Chính, Đa Phúc, Ha Noi",
     },
   },
@@ -133,6 +136,7 @@ export const weddingData = {
         name: "Nguyễn Ngọc Hân",
         bank: "MB Bank",
         accountNumber: "1234567890",
+        // Ảnh QR chuyển khoản: đặt file ảnh vào public/images/ rồi sửa đường dẫn tại đây.
         qrImage: "",
       },
       {
@@ -140,7 +144,6 @@ export const weddingData = {
         name: "Nguyễn Quang Thiện",
         bank: "MB Bank",
         accountNumber: "0969152065",
-        // Ảnh QR chuyển khoản: đặt file ảnh vào public/images/ rồi sửa đường dẫn tại đây.
         qrImage: "",
       },
     ],

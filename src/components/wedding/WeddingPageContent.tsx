@@ -8,10 +8,12 @@ import GiftSection from "@/components/GiftSection";
 import FloatingWidgets from "@/components/FloatingWidgets";
 import ScrollToTop from "@/components/ScrollToTop";
 import MusicPlayer from "@/components/MusicPlayer";
+import OpeningCurtain from "@/components/OpeningCurtain";
 
 export default function WeddingPageContent() {
     return (
         <>
+            <OpeningCurtain />
             <ScrollToTop />
             <MusicPlayer />
             <main className="wedding-container relative mx-auto min-h-screen w-full max-w-[800px] overflow-x-hidden bg-[var(--color-background)] pb-16">
