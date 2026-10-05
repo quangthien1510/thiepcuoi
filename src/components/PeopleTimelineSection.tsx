@@ -14,31 +14,11 @@ const TIMELINE_ICONS: Record<string, React.ComponentType<{ className?: string }>
 };
 
 export default function PeopleTimelineSection() {
-  const { people, timeline, photos } = weddingData;
+  const { timeline, photos } = weddingData;
   const timelineGallery = photos.extraPhotos.slice(0, 5);
 
   return (
     <section className="section-frame flex flex-col gap-10 pb-14">
-      <div className="flex items-center gap-4 px-4 sm:px-6">
-        <RevealOnScroll direction="left" className="flex flex-1 flex-col items-center gap-1 text-center">
-          <p className="font-script text-2xl text-[var(--color-rose)]">
-            {people.bride.role}
-          </p>
-          <p className="font-display text-xl font-semibold text-[var(--color-maroon-deep)]">
-            {people.bride.name}
-          </p>
-          <p className="font-body text-sm text-[var(--color-ink)]/60">{people.bride.birth}</p>
-        </RevealOnScroll>
-        <RevealOnScroll direction="right" delayMs={100} className="w-[58%]">
-          <PhotoPlaceholder
-            src={photos.bride}
-            label="Ảnh cô dâu"
-            icon="👰"
-            className="aspect-[2.5/4] h-full w-full rounded-xl"
-          />
-        </RevealOnScroll>
-      </div>
-
       <div className="relative isolate overflow-hidden py-10">
         <div className="absolute inset-0 z-0 opacity-45">
           <PhotoPlaceholder
