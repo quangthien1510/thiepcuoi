@@ -6,7 +6,7 @@ export const weddingData = {
   // Nhạc sẽ bắt đầu sau lần chạm/click đầu tiên của khách (do chính sách mobile).
   music: {
     enabled: true,
-    src: "/music/LỄ ĐƯỜNG của Hải Long & Salim  KAI ĐINH  Official MV - Kai Dinh Official (youtube).opus",
+    src: "public/music/Xứng Đôi Cưới Thôi - Lê Thiện Hiếu (Bài Hát Cực Cute Nhất 2019) - MARTSEN (youtube).opus",
     volume: 0.45,
   },
   // Chỉ cần thêm ảnh vào public/images/ rồi khai báo đường dẫn tại đây.
